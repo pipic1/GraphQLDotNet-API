@@ -1,4 +1,8 @@
 .reveal h1, .reveal h2 {
-  color: #5289F7;
+  color: #e10098;
+  font-family: "Open Sans", sans-serif;
+}
+
+* {
   font-family: "Open Sans", sans-serif;
 }
