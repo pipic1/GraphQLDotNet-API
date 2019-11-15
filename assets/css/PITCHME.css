@@ -1,3 +1,4 @@
-.reavel .present h1{
-  color:red;
+.reveal h1, .reveal h2 {
+  color: #5289F7;
+  font-family: "Open Sans", sans-serif;
 }
