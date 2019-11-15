@@ -1,4 +1,4 @@
-+++---?color=linear-gradient(to left, #56ccf2, #2f80ed)
+---?color=linear-gradient(to right, #0f2027, #203a43, #2c5364);
 
 # Découverte de GraphQL
 
