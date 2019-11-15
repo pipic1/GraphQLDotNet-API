@@ -1,8 +1,9 @@
++++---?color=linear-gradient(to left, #56ccf2, #2f80ed)
 
 # Découverte de GraphQL
 
 
-+++
++++---?color=red
 
 # TEST 2
 
