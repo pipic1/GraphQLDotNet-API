@@ -55,28 +55,32 @@ Create all necessary files.
 
 
 # Mutation and query 
-``
+```
 query GetTodo {
-  importanttodo(id: "57a8d913-460e-41af-8cc3-a3ddd04a9d73") {
+	importanttodo(id: "57a8d913-460e-41af-8cc3-a3ddd04a9d73") {
 		id
-    name
-    description
-    priority
-  }
+		name
+		description
+		priority
+	}
 }
-``
+```
 
+```
 query GetAllImportantTodos{
   
 }
+```
 
+
+```
 mutation CreateTaskImportant($task: ImportantTodoInput!) {
   createImportantTask(task: $task) {
     id
     name
   }
 }
-``
+```
 
 
 
