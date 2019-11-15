@@ -1,6 +1,7 @@
-# GraphQLDotNet-API
+# GraphQLDotNet-API ⚛️
 
-A GraphQL TodoList Web API
+A GraphQL TodoList Web API. 
+Query, Mutation, Schema.
 
 Using Dotnet Core 3.0 
 Graphql: https://graphql-dotnet.github.io/docs/getting-started/introduction/
@@ -69,6 +70,20 @@ New-Item -ItemType file StatusEnum.cs
 ```
 
 ### Create the API 
+
+
+### Build and Run
+
+Simply launch the following command:
+
+
+`dotnet build`
+
+Run the WebAPI.
+
+`dotnet run -p .\WebApiTodoList`
+
+Now go to 
 
 
 
