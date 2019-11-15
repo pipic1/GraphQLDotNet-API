@@ -4,7 +4,10 @@ A GraphQL TodoList Web API.
 Query, Mutation, Schema.
 
 Using Dotnet Core 3.0 
+
 Graphql: https://graphql-dotnet.github.io/docs/getting-started/introduction/
+
+Get the pitch [here](https://gitpitch.com/pipic1/GraphQLDotNet-API)
 
 ## Start and run
 
