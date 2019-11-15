@@ -1,12 +1,29 @@
 # GraphQLDotNet-API
+
 A GraphQL TodoList Web API
-Command
+
+Using Dotnet Core 3.0 
+Graphql: https://graphql-dotnet.github.io/docs/getting-started/introduction/
+
+## From scratch
+
+Init solution and projects.
 
 `dotnet new sln`
 
 `dotnet new classlib TodoList`
 
 `dotnet new webapi -n WebApiTodoList`
+
+Add project to your solution.
+
+`dotnet sln add WebApiTodoList`
+
+`dotnet sln add TodoList`
+
+### Data structure
+
+Create all necessary files.
 
 `cd TodoList`
 
@@ -17,7 +34,6 @@ Command
 `New-Item -ItemType file TodoListMutation.cs`
 
 `New-Item -ItemType file TodoListSchema.cs`
-
 
 `mkdir Types`
 
@@ -32,6 +48,8 @@ Command
 `New-Item -ItemType file ImportantTodo.cs`
 
 `New-Item -ItemType file StatusEnum.cs`
+
+### Create the API 
 
 
 
