@@ -3,7 +3,7 @@
 # Découverte de GraphQL
 
 
----?color=red
+---
 
 ## Présentation
 
@@ -45,6 +45,42 @@ type Project {
 
 
 ---
+
+Requeter les données désirées: 
+
+```
+
+{
+
+  project(name: "GraphQL") {
+
+    tagline
+
+  }
+
+}
+
+```
+
+---
+
+Recupérer des résultats: 
+
+```
+
+{
+
+  "project": {
+
+    "tagline": "A query language for APIs"
+
+  }
+
+}
+
+```
+----
+
 
 
 ## TEST 1 
