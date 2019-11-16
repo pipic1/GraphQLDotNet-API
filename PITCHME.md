@@ -5,19 +5,16 @@
 
 ---
 
-### - Présentation
+## - Présentation
 
-### - Les différentes approches
+## - Les différentes approches
 
-### - Codons!
+## - Codons!
 
 
 ---
 
 ## Présentation
-
----
-
 
 +++
 
