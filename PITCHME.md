@@ -14,6 +14,13 @@
 
 ---
 
+## Présentation
+
+---
+
+
++++
+
 - Un langage de requetage de données 
 
 - Un schema clairement défini
@@ -23,7 +30,7 @@
 - Mutation : modification de données
 
 
----
++++
 
 ## Première étape 
 
@@ -44,7 +51,7 @@ type Project {
 ````
 
 
----
++++
 
 Requeter les données désirées: 
 
@@ -62,7 +69,7 @@ Requeter les données désirées:
 
 ```
 
----
++++
 
 Recupérer des résultats: 
 
@@ -80,8 +87,21 @@ Recupérer des résultats:
 
 ```
 
+
 ---
 
+## Les différentes approches
+
++++
+
+## Schéma first approche
+
+
++++
+
+## Code first approche
+
++++
 
 
 ## TEST 1 
