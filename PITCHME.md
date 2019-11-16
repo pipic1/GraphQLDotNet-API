@@ -79,7 +79,8 @@ Recupérer des résultats:
 }
 
 ```
-----
+
+---
 
 
 
