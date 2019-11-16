@@ -3,16 +3,49 @@
 # Découverte de GraphQL
 
 
-+++---?color=red
+---?color=red
 
-# TEST 2
+## Présentation
 
+## Les différentes approches
 
-+++
+## Codons!
 
-# TEST 3 
 
 ---
+
+- Un langage de requetage de données 
+
+- Un schema clairement défini
+
+- Query : recupération des données
+
+- Mutation : modification de données
+
+
+---
+
+## Première étape 
+
+Definir un schema
+
+```
+
+type Project {
+
+  name: String
+
+  tagline: String
+
+  contributors: [User]
+
+}
+
+````
+
+
+---
+
 
 ## TEST 1 
 ## TEST 1 
