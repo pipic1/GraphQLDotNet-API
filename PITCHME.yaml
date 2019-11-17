@@ -4,6 +4,7 @@
 # Look-and-Feel
 #logo : assets/images/logo.png
 theme-override : assets/css/PITCHME.css
+code-line-numbers : true
 
 # Behavior
 #transition : none
