@@ -1104,11 +1104,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ppier\\Developpement\\ExempleGraphQL\\DemoGraphQL\\WebApiTodoList\\WebApiTodoList.csproj",
+      "projectUniqueName": "C:\\Users\\ppier\\Developpement\\ExempleGraphQL\\GraphQLDotNet-API\\WebApiTodoList\\WebApiTodoList.csproj",
       "projectName": "WebApiTodoList",
-      "projectPath": "C:\\Users\\ppier\\Developpement\\ExempleGraphQL\\DemoGraphQL\\WebApiTodoList\\WebApiTodoList.csproj",
+      "projectPath": "C:\\Users\\ppier\\Developpement\\ExempleGraphQL\\GraphQLDotNet-API\\WebApiTodoList\\WebApiTodoList.csproj",
       "packagesPath": "C:\\Users\\ppier\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ppier\\Developpement\\ExempleGraphQL\\DemoGraphQL\\WebApiTodoList\\obj\\",
+      "outputPath": "C:\\Users\\ppier\\Developpement\\ExempleGraphQL\\GraphQLDotNet-API\\WebApiTodoList\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ppier\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -1122,8 +1122,8 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "C:\\Users\\ppier\\Developpement\\ExempleGraphQL\\DemoGraphQL\\TodoList\\TodoList.csproj": {
-              "projectPath": "C:\\Users\\ppier\\Developpement\\ExempleGraphQL\\DemoGraphQL\\TodoList\\TodoList.csproj"
+            "C:\\Users\\ppier\\Developpement\\ExempleGraphQL\\GraphQLDotNet-API\\TodoList\\TodoList.csproj": {
+              "projectPath": "C:\\Users\\ppier\\Developpement\\ExempleGraphQL\\GraphQLDotNet-API\\TodoList\\TodoList.csproj"
             }
           }
         }

@@ -1,0 +1,8 @@
+C:\Users\ppier\Developpement\ExempleGraphQL\GraphQLDotNet-API\TodoList\bin\Debug\netstandard2.0\GraphQL.TodoList.deps.json
+C:\Users\ppier\Developpement\ExempleGraphQL\GraphQLDotNet-API\TodoList\bin\Debug\netstandard2.0\GraphQL.TodoList.dll
+C:\Users\ppier\Developpement\ExempleGraphQL\GraphQLDotNet-API\TodoList\bin\Debug\netstandard2.0\GraphQL.TodoList.pdb
+C:\Users\ppier\Developpement\ExempleGraphQL\GraphQLDotNet-API\TodoList\obj\Debug\netstandard2.0\TodoList.csprojAssemblyReference.cache
+C:\Users\ppier\Developpement\ExempleGraphQL\GraphQLDotNet-API\TodoList\obj\Debug\netstandard2.0\TodoList.AssemblyInfoInputs.cache
+C:\Users\ppier\Developpement\ExempleGraphQL\GraphQLDotNet-API\TodoList\obj\Debug\netstandard2.0\TodoList.AssemblyInfo.cs
+C:\Users\ppier\Developpement\ExempleGraphQL\GraphQLDotNet-API\TodoList\obj\Debug\netstandard2.0\GraphQL.TodoList.dll
+C:\Users\ppier\Developpement\ExempleGraphQL\GraphQLDotNet-API\TodoList\obj\Debug\netstandard2.0\GraphQL.TodoList.pdb

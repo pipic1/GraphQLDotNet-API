@@ -19,7 +19,7 @@ namespace TodoList.Types
                 resolve: context => data.GetFriends(context.Source)
             );
 
-            Field(h => h.Priority, nullable: true).Description("The priority of the tasks");
+            Field<StatusEnum>("priority","The priority of the tasks");
 
             Interface<TodoItemInterface>();
         }

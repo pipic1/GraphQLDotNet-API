@@ -779,11 +779,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ppier\\Developpement\\ExempleGraphQL\\DemoGraphQL\\TodoList\\TodoList.csproj",
+      "projectUniqueName": "C:\\Users\\ppier\\Developpement\\ExempleGraphQL\\GraphQLDotNet-API\\TodoList\\TodoList.csproj",
       "projectName": "GraphQL.TodoList",
-      "projectPath": "C:\\Users\\ppier\\Developpement\\ExempleGraphQL\\DemoGraphQL\\TodoList\\TodoList.csproj",
+      "projectPath": "C:\\Users\\ppier\\Developpement\\ExempleGraphQL\\GraphQLDotNet-API\\TodoList\\TodoList.csproj",
       "packagesPath": "C:\\Users\\ppier\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ppier\\Developpement\\ExempleGraphQL\\DemoGraphQL\\TodoList\\obj\\",
+      "outputPath": "C:\\Users\\ppier\\Developpement\\ExempleGraphQL\\GraphQLDotNet-API\\TodoList\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ppier\\AppData\\Roaming\\NuGet\\NuGet.Config"

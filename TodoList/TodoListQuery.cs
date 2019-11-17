@@ -11,21 +11,32 @@ namespace TodoList
             Name = "Query";
 
             Field<ImportantType>(
-                "importanttodo",
+                "important",
                 arguments: new QueryArguments(
                     new QueryArgument<NonNullGraphType<StringGraphType>> { Name = "id", Description = "id of the important task." }
                 ),
                 resolve: context => data.GetImportantTodoByIdAsync(context.GetArgument<string>("id"))
             );
+            
+
+            Field<ListGraphType<ImportantType>>(
+                "importanttodos",
+                resolve: context => data.GetPrimaryTodoAsync()
+            );
 
             Func<ResolveFieldContext, string, object> func = (context, id) => data.GetSecondaryTodoByIdAsync(id);
 
             FieldDelegate<SecondaryType>(
-                "secondarytodo",
+                "secondary",
                 arguments: new QueryArguments(
                     new QueryArgument<NonNullGraphType<StringGraphType>> { Name = "id", Description = "id of the secondary task" }
                 ),
                 resolve: func
+            );
+
+            Field<ListGraphType<SecondaryType>>(
+                "secondarytodos",
+                resolve: context => data.GetSecondaryTodoAsync()
             );
         }
     }

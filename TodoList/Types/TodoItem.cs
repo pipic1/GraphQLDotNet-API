@@ -10,7 +10,7 @@ namespace TodoList.Types
 
     public class ImportantTodo : TodoItem
     {
-        public string Priority { get; set; }
+        public int Priority { get; set; }
     }
 
     public class SecondaryTodo : TodoItem

@@ -19,12 +19,14 @@ namespace TodoList
                 Id = "1",
                 Name = "Acheter du pain",
                 Description = "1 baguette",
+                Priority = 1
             });
             _importantTodo.Add(new ImportantTodo
             {
                 Id = "1",
                 Name = "Aller chercher le colis",
                 Description = "Avant 20h",
+                Priority = 3
             });
 
             _secondaryTodos.Add(new SecondaryTodo
@@ -64,6 +66,14 @@ namespace TodoList
         public Task<SecondaryTodo> GetSecondaryTodoByIdAsync(string id)
         {
             return Task.FromResult(_secondaryTodos.FirstOrDefault(h => h.Id == id));
+        }       
+         public Task<List<SecondaryTodo>> GetSecondaryTodoAsync()
+        {
+            return Task.FromResult(_secondaryTodos.FindAll(FindTodo));
+        }
+         public Task<List<ImportantTodo>> GetPrimaryTodoAsync()
+        {
+            return Task.FromResult(_importantTodo.FindAll(FindImportantTodo));
         }
 
         public ImportantTodo AddImportantTodo(ImportantTodo task)
@@ -71,6 +81,17 @@ namespace TodoList
             task.Id = Guid.NewGuid().ToString();
             _importantTodo.Add(task);
             return task;
+        }
+
+        // Filter on your todos
+        private static bool FindTodo(SecondaryTodo bk)
+        {
+            return true;
+        }
+
+        private static bool FindImportantTodo(ImportantTodo bk)
+        {
+            return true;
         }
     }
 }
