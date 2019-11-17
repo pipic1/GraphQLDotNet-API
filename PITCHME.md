@@ -18,7 +18,15 @@
 
 +++
 
-- Un langage de requetage de données 
+- Crée par Facebook en 2012
+
+- Open source depuis 2015
+
+- Language de requetage de données
+
+- Utilisé par Facebook, Airbnb, GitHub, Audi, Paypal, Twitter
+
++++
 
 - Un schema clairement défini
 
@@ -26,10 +34,15 @@
 
 - Mutation : modification de données
 
+- Subscription : abonnement ( web socket 
+)
+
 
 +++
 
 ## Première étape 
+
+@snap[east text-06 text-white span-32] @quote[GitPitch Desktop with speaker notes is AMAZING!](@fa[twitter] @davetapley) @snapend
 
 Definir un schema
 
