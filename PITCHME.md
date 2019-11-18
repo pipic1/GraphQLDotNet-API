@@ -5,11 +5,11 @@
 
 ---
 
-## 1 - Présentation de GraphQL 
+### 1 - Présentation de GraphQL 
 
-## 2 - Les différentes approches
+### 2 - Les différentes approches
 
-## 3 - Place au code
+### 3 - Place au code
 
 
 ---
@@ -37,26 +37,29 @@ Ne s'appuie pas sur le protocole http comme REST
 
 +++
 
+@snap[west text-08]
 Pour rappel REST lui calque son fonctinnement sur HTTP:
 
 @ul
-    - une ressource = une url
-    - réutilisation des verbes d’action(GET, PUT, …)
-    - réutilisation des codes de statut (200, 404, …)
+- une ressource = une url
+- réutilisation des verbes d’action(GET, PUT, …)
+- réutilisation des codes de statut (200, 404, …)
 @ulend
 
+@snapend 
 +++
 
 @snap[west text-08]
 Pour GraphQl l'approche est differente: 
 
 @ul
-    - Une URL unique (généralement /graphql)
-    - requète POST
-    - Status toujours OK (200), sauf exception lié a l'authentification qui sera un 401 UNAUTHORIZED  
+- Une URL unique (généralement /graphql)
+- requète POST
+- Status toujours OK (200), sauf exception lié a l'authentification qui sera un 401 UNAUTHORIZED  
 @ulend
 
-L'ensemble des informations utiles sont donc contenu dans le BODY, y compris les erreurs survenues.
+L'ensemble des informations utiles sont donc contenu dans le BODY, 
+y compris les erreurs survenues.
 
 @snapend 
 
@@ -65,56 +68,56 @@ L'ensemble des informations utiles sont donc contenu dans le BODY, y compris les
 @snap[west text-08]
 Des données adaptés au client:
 
-    La force de graphql réside dans le fait que le client peut spécifié les données qu'il souhaite récupéré. 
-    Cas d'usage: 
-    Pour afficher une liste d'utilisateur, on ne souhaite que récupérer le nom, le prénom et la photo de profil
-    Pour afficher l'utilisateur en lui meme, on désire plus de données, les amis en communs, l'age, etc.
+La force de graphql réside dans le fait que le client peut spécifié les données qu'il souhaite récupéré. 
+Cas d'usage: 
+Pour afficher une liste d'utilisateur, on ne souhaite que récupérer le nom, le prénom et la photo de profil
+Pour afficher l'utilisateur en lui meme, on désire plus de données, les amis en communs, l'age, etc.
 
-    En REST, deux solutions existents:
-        - Laisser le client trier et afficher les données qu'il souhaite
-        - Adapter chaque endpoint selon les données que le client désire 
+En REST, deux solutions existents:
+- Laisser le client trier et afficher les données qu'il souhaite
+- Adapter chaque endpoint selon les données que le client désire 
 @snapend 
 
 +++
 
 Des Graphes
-    En GraphQl, le client va envoyer une requete comme ceci:
+En GraphQl, le client va envoyer une requete comme ceci:
 
-    ```
-    GET /graphql
+```
+GET /graphql
 
-    body: query {
-        //MAIL
-        mails {
-            id
-            subject
-            //USER
-            sender {
-                firstname
-                lastname
-            }
+body: query {
+    //MAIL
+    mails {
+        id
+        subject
+        //USER
+        sender {
+            firstname
+            lastname
         }
     }
-    ```
+}
+```
 
 Chaque donnée permet d’accéder dynamiquement à d’autres données et ainsi de théoriquement récupérer un graphe complet.
 Théoriquement car cout serveur plus important, si beaucoup d'imbrication.
 
 +++
-
+@snap[west text-08]
 Le schéma
 
 Mettre en place une API GraphQL nécessite l’écriture d’un schéma spécifique sur le serveur; 
 Celui-ci définit les demandes en lecture (query) et en écriture (mutation).
 Le client peut donc demander au serveur les informations qu'il désire contenu dans le schéma.
-
+@snapend 
 +++
-
+@snap[west text-08]
 Une documentation automatique du schéma d’API
 
 GraphQL fournit de base un mécanisme d’introspection permettant de ‘découvrir’ l’API fournie par un serveur donné.
 Grace a des outils tel que graphql-cli, ou bien encore graphiql, il est possible d'explorer le schéma.
-
+@snapend 
 ---
 
 ## Les différentes approches
@@ -127,6 +130,7 @@ Grace a des outils tel que graphql-cli, ou bien encore graphiql, il est possible
 ---
 
 Maintenant place au code 
+----
 
 Le but est de créer un API GraphQL from scratch
 L'approche sera orienté données, création de la strucutre des données en amont . 
