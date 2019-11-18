@@ -109,7 +109,7 @@ Théoriquement car cout serveur plus important, si beaucoup d'imbrication.
 
 
 +++
-@snap[west text-08]
+
 #### Le schéma
 
 ----
@@ -117,18 +117,17 @@ Théoriquement car cout serveur plus important, si beaucoup d'imbrication.
 Mettre en place une API GraphQL nécessite l’écriture d’un schéma spécifique sur le serveur; 
 Celui-ci définit les demandes en lecture (query) et en écriture (mutation).
 Le client peut donc demander au serveur les informations qu'il désire contenu dans le schéma.
-@snapend 
 
 
 +++
-@snap[west text-08]
+
 #### Une documentation automatique du schéma d’API
 
 ----
 
 GraphQL fournit de base un mécanisme d’introspection permettant de ‘découvrir’ l’API fournie par un serveur donné.
 Grace a des outils tel que graphql-cli, ou bien encore graphiql, il est possible d'explorer le schéma.
-@snapend 
+
 ---
 
 ## Les différentes approches
@@ -140,7 +139,8 @@ Grace a des outils tel que graphql-cli, ou bien encore graphiql, il est possible
 
 ---
 
-Maintenant place au code 
+Maintenant place au code
+
 ----
 
 Le but est de créer un API GraphQL from scratch
