@@ -5,6 +5,8 @@
 #logo : assets/images/logo.png
 theme-override : assets/css/PITCHME.css
 code-line-numbers : true
+theme-headline : [ "Open Sans", "#e10098", "none" ]
+theme-byline : [ "Raleway", "#111111", "none" ]
 
 # Behavior
 #transition : none
