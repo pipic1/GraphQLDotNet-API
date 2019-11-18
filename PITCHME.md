@@ -291,9 +291,9 @@ Le constructeur ne prends aucun argument
 
 ----
 Créer une classe ImportantType qui hérite de ObjectGraphType<ImportantTodo>
-</br>
+    
 Cette classe permet de décrire l'ensemble des champs
-</br>
+
 Le constructeur prends le gestionnaire des données en argument (TodoListData)
 
 +++?code=TodoList/Types/ImportantType.cs&lang=csharp
@@ -304,9 +304,13 @@ Le constructeur prends le gestionnaire des données en argument (TodoListData)
 
 ---
 Créer une enum: Priority, avec trois valeurs ( LOW, MEDIUM, HIGH )
+
 Créer une classe: PriorityEnum qui hérite de EnumerationGraphType<Priority>
+    
 Son constructeur set les proriétés Name, Description.
+
 Ainsi que l'ensemble des valeurs de l'enum comme suit:
+
 `AddValue("LOW", "The task is not started yet", 1);`
 
 +++?code=TodoList/Types/StatusEnum.cs&lang=csharp
