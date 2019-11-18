@@ -28,7 +28,9 @@
 
 +++
 
-GraphQl une vision differente de REST
+### GraphQl une vision differente de REST
+
+----
 
 Graphql apporte une vision differente de la communication client / serveur 
 Ne s'appuie pas sur le protocole http comme REST
@@ -37,21 +39,30 @@ Ne s'appuie pas sur le protocole http comme REST
 
 Pour rappel REST lui calque son fonctinnement sur HTTP:
 
-    une ressource = une url
-    réutilisation des verbes d’action(GET, PUT, …)
-    réutilisation des codes de statut (200, 404, …)
+@ul
+    - une ressource = une url
+    - réutilisation des verbes d’action(GET, PUT, …)
+    - réutilisation des codes de statut (200, 404, …)
+@ulend
 
 +++
 
+@snap[west text-08]
 Pour GraphQl l'approche est differente: 
 
-    Une URL unique (généralement /graphql)
-    requète POST
-    Status toujours OK (200), sauf exception lié a l'authentification qui sera un 401 UNAUTHORIZED  
-    L'ensemble des informations utiles sont donc contenu dans le BODY, y compris les erreurs survenues.
+@ul
+    - Une URL unique (généralement /graphql)
+    - requète POST
+    - Status toujours OK (200), sauf exception lié a l'authentification qui sera un 401 UNAUTHORIZED  
+@ulend
+
+L'ensemble des informations utiles sont donc contenu dans le BODY, y compris les erreurs survenues.
+
+@snapend 
 
 +++
 
+@snap[west text-08]
 Des données adaptés au client:
 
     La force de graphql réside dans le fait que le client peut spécifié les données qu'il souhaite récupéré. 
@@ -62,6 +73,7 @@ Des données adaptés au client:
     En REST, deux solutions existents:
         - Laisser le client trier et afficher les données qu'il souhaite
         - Adapter chaque endpoint selon les données que le client désire 
+@snapend 
 
 +++
 
@@ -112,7 +124,7 @@ Grace a des outils tel que graphql-cli, ou bien encore graphiql, il est possible
 ## Schéma first approche
 
 
-----
+---
 
 Maintenant place au code 
 
