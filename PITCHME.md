@@ -125,6 +125,64 @@ Le client peut donc demander au serveur les informations qu'il désire contenu d
 
 +++
 
+
+
+Definir un schema
+
+```
+
+type Project {
+
+  name: String
+
+  tagline: String
+
+  contributors: [User]
+
+}
+
+````
+
+
++++
+
+Requeter les données désirées: 
+
+```
+
+{
+
+  project(name: "GraphQL") {
+
+    tagline
+
+  }
+
+}
+
+```
+
++++
+
+Recupérer des résultats: 
+
+```
+
+{
+
+  "project": {
+
+    "tagline": "A query language for APIs"
+
+  }
+
+}
+
+```
+
+
+---
+
 #### Une documentation automatique du schéma d’API
 
 ----
