@@ -2,9 +2,9 @@ using GraphQL.Types;
 
 namespace TodoList.Types
 {
-    public class StatusEnum : EnumerationGraphType
+    public class PriorityEnum : EnumerationGraphType<Priority>
     {
-        public StatusEnum()
+        public PriorityEnum()
         {
             Name = "Status";
             Description = "Status of a task.";
@@ -14,7 +14,7 @@ namespace TodoList.Types
         }
     }
 
-    public enum Statuses
+    public enum Priority
     {
         LOW  = 1,
         MEDIUM  = 2,

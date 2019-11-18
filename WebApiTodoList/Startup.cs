@@ -26,7 +26,7 @@ namespace WebApiTodoList
             services.AddSingleton<ImportantTodoInputType>();
             services.AddSingleton<SecondaryType>();
             services.AddSingleton<TodoItemInterface>();
-            services.AddSingleton<StatusEnum>();
+            services.AddSingleton<PriorityEnum>();
             services.AddSingleton<ISchema, TodoListSchema>();
 
             services.AddLogging(builder => builder.AddConsole());

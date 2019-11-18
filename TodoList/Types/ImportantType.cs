@@ -19,7 +19,7 @@ namespace TodoList.Types
                 resolve: context => data.GetRelatedTask(context.Source)
             );
 
-            Field<StatusEnum>("priority","The priority of the tasks");
+            Field<PriorityEnum>("priority","The priority of the tasks");
 
             Interface<TodoItemInterface>();
         }
