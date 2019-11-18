@@ -16,7 +16,7 @@ namespace TodoList.Types
 
             Field<ListGraphType<TodoItemInterface>>(
                 "relatedto",
-                resolve: context => data.GetFriends(context.Source)
+                resolve: context => data.GetRelatedTask(context.Source)
             );
 
             Field<StatusEnum>("priority","The priority of the tasks");

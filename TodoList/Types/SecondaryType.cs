@@ -14,7 +14,7 @@ namespace TodoList.Types
 
             Field<ListGraphType<TodoItemInterface>>(
                 "relatedto",
-                resolve: context => data.GetFriends(context.Source)
+                resolve: context => data.GetRelatedTask(context.Source)
             );
 
             Interface<TodoItemInterface>();

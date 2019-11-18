@@ -41,7 +41,7 @@ namespace TodoList
             });
         }
 
-        public IEnumerable<TodoItem> GetFriends(TodoItem task)
+        public IEnumerable<TodoItem> GetRelatedTask(TodoItem task)
         {
             if (task == null)
             {
