@@ -32,7 +32,7 @@
 
 ----
 
-Graphql apporte une vision differente de la communication client / serveur 
+Graphql apporte une vision differente de la communication client / serveur </br>
 Ne s'appuie pas sur le protocole http comme REST
 
 +++
@@ -65,10 +65,10 @@ y compris les erreurs survenues.
 Des données adaptés au client:
 
 La force de graphql réside dans le fait que le client peut spécifié les données qu'il souhaite récupéré. 
-Cas d'usage: 
-Pour afficher une liste d'utilisateur, on ne souhaite que récupérer le nom, le prénom et la photo de profil
-Pour afficher l'utilisateur en lui meme, on désire plus de données, les amis en communs, l'age, etc.
-
+Cas d'usage: </br>
+- Pour afficher une liste d'utilisateur, on ne souhaite que récupérer le nom, le prénom et la photo de profil
+- Pour afficher l'utilisateur en lui meme, on désire plus de données, les amis en communs, l'age, etc.
+</br></br>
 En REST, deux solutions existents:
 - Laisser le client trier et afficher les données qu'il souhaite
 - Adapter chaque endpoint selon les données que le client désire 
@@ -104,6 +104,7 @@ body: query {
 
 @snap[south-east span-60 text-08]
 Chaque donnée permet d’accéder dynamiquement à d’autres données et ainsi de théoriquement récupérer un graphe complet.
+
 Théoriquement car cout serveur plus important, si beaucoup d'imbrication.
 @snapend
 
@@ -114,9 +115,12 @@ Théoriquement car cout serveur plus important, si beaucoup d'imbrication.
 
 ----
 
-Mettre en place une API GraphQL nécessite l’écriture d’un schéma spécifique sur le serveur; 
-Celui-ci définit les demandes en lecture (query) et en écriture (mutation).
-Le client peut donc demander au serveur les informations qu'il désire contenu dans le schéma.
+
+Mettre en place une API GraphQL nécessite l’écriture d’un schéma spécifique sur le serveur.</br>
+
+Celui-ci définit les demandes en lecture (query) et en écriture (mutation).</br>
+
+Le client peut donc demander au serveur les informations qu'il désire contenu dans le schéma.</br>
 
 
 +++
@@ -125,7 +129,7 @@ Le client peut donc demander au serveur les informations qu'il désire contenu d
 
 ----
 
-GraphQL fournit de base un mécanisme d’introspection permettant de ‘découvrir’ l’API fournie par un serveur donné.
+GraphQL fournit de base un mécanisme d’introspection permettant de ‘découvrir’ l’API fournie par un serveur donné.</br>
 Grace a des outils tel que graphql-cli, ou bien encore graphiql, il est possible d'explorer le schéma.
 
 ---
@@ -143,8 +147,8 @@ Maintenant place au code
 
 ----
 
-Le but est de créer un API GraphQL from scratch
-L'approche sera orienté données, création de la strucutre des données en amont . 
+Le but est de créer un API GraphQL from scratch</br>
+L'approche sera orienté données, création de la strucutre des données en amont . </br>
 La structure sera simple une API permettant de gérer une TodoList.
 
 +++
