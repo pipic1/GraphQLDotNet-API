@@ -143,9 +143,6 @@ Le client peut donc demander au serveur les informations qu'il désire contenu d
 
 
 +++
-
-
-@snap[west span-30 text-08]
 Definir un schema
 
 ```
@@ -159,9 +156,7 @@ type Project {
 
 }
 ````
-@snapend
-
-@snap[ span-30 text-08]
++++
 Requeter les données désirées: 
 
 ```
@@ -175,9 +170,7 @@ Requeter les données désirées:
 
 }
 ```
-@snapend
-
-@snap[east span-30 text-08]
++++
 Recupérer des résultats: 
 
 ```
@@ -191,7 +184,6 @@ Recupérer des résultats:
 
 }
 ```
-@snapend
 
 ---
 #### Une documentation automatique du schéma d’API
@@ -208,29 +200,39 @@ Grace a des outils tel que graphql-cli, ou bien encore graphiql, il est possible
 
 ## Schéma first approche
 
++++
+
+## Schéma first approche
+
 
 ---
 
 #### Maintenant place au code
 ----
 
-Le but est de créer un API GraphQL from scratch</br>
-L'approche sera orienté données, création de la strucutre des données en amont . </br>
+Le but est de créer un API GraphQL from scratch
+</br></br>
+L'approche sera orienté données, création de la strucutre des données en amont . </br></br>
 La structure sera simple une API permettant de gérer une TodoList.
 
 +++
 
-@snap[north-east span-100]
-@box(Creer un nouvelle solution:#`dotnet new sln`)
-@snapend
+#### Creer un nouvelle solution:
+`dotnet new sln`
 
-@snap[east span-100]
-@box(Et deux projet:#`dotnet new classlib TodoList`</br>`dotnet new webapi -n WebApiTodoList`)
-@snapend
+</br>
+</br>
+#### Deux projet:
+`dotnet new classlib TodoList`
+</br>
+`dotnet new webapi -n WebApiTodoList`
 
-@snap[south-east span-100]
-@box(On les ajoutent a la solution#`dotnet sln add TodoList`</br>`dotnet sln add WebApiTodoList`)
-@snapend
+</br>
+</br>
+#### On les ajoutent a la solution
+`dotnet sln add TodoList`
+</br>
+`dotnet sln add WebApiTodoList`
 
 +++ 
 
