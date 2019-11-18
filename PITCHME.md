@@ -76,8 +76,9 @@ En REST, deux solutions existents:
 
 +++
 @snap[north span-100]
-##Des Graphes
+## Des Graphes
 ----
+
 En GraphQl, le client va envoyer une requete comme ceci:
 </br>
 @snapend 
