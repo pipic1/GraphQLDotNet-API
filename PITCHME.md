@@ -111,6 +111,7 @@ Théoriquement car cout serveur plus important, si beaucoup d'imbrication.
 +++
 @snap[west text-08]
 #### Le schéma
+
 ----
 
 Mettre en place une API GraphQL nécessite l’écriture d’un schéma spécifique sur le serveur; 
@@ -122,6 +123,7 @@ Le client peut donc demander au serveur les informations qu'il désire contenu d
 +++
 @snap[west text-08]
 #### Une documentation automatique du schéma d’API
+
 ----
 
 GraphQL fournit de base un mécanisme d’introspection permettant de ‘découvrir’ l’API fournie par un serveur donné.
