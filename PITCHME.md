@@ -4,7 +4,7 @@
 
 
 ---
-@transition[zoom-in fade-out]
+@transition[slide-in slide-out]
 
 ### 1 - Présentation de GraphQL 
 
@@ -15,11 +15,13 @@
 
 ---
 
-@transition[zoom-in fade-out]
+@transition[slide-in slide-out]
 
 ## Présentation de GraphQL 
 
 +++
+
+@transition[slide-in slide-out]
 
 - Crée par Facebook en 2012
 
@@ -30,6 +32,8 @@
 - Utilisé par Facebook, Airbnb, GitHub, Audi, Paypal, Twitter
 
 +++
+
+@transition[slide-in slide-out]
 
 @snap[north]
 #### GraphQl une vision differente de REST
@@ -42,6 +46,8 @@ Ne s'appuie pas sur le protocole http comme REST
 
 +++
 
+@transition[slide-in slide-out]
+
 @snap[west]
 Pour rappel REST lui calque son fonctinnement sur HTTP:
 
@@ -53,6 +59,7 @@ Pour rappel REST lui calque son fonctinnement sur HTTP:
 
 @snapend 
 +++
+@transition[slide-in slide-out]
 @snap[text-left]
 Pour GraphQl l'approche est differente: 
 
@@ -66,6 +73,7 @@ L'ensemble des informations utiles sont donc contenu dans le BODY,
 y compris les erreurs survenues.
 @snapend 
 +++
+@transition[slide-in slide-out]
 @snap[west text-08]
 Des données adaptés au client:
 
@@ -80,6 +88,7 @@ En REST, deux solutions existents:
 @snapend 
 
 +++?color=white
+@transition[slide-in slide-out]
 @snap[north]
 #### Des Graphes
 @snapend
