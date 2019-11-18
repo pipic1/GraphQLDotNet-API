@@ -4,6 +4,7 @@
 
 
 ---
+@transition[zoom-in fade-out]
 
 ### 1 - Présentation de GraphQL 
 
@@ -13,6 +14,8 @@
 
 
 ---
+
+@transition[zoom-in fade-out]
 
 ## Présentation de GraphQL 
 
