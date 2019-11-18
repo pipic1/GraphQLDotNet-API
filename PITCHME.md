@@ -31,9 +31,10 @@
 #### GraphQl une vision differente de REST
 
 ----
-
+@snap[text-left]
 Graphql apporte une vision differente de la communication client / serveur </br>
 Ne s'appuie pas sur le protocole http comme REST
+@snapend 
 
 +++
 
@@ -48,7 +49,7 @@ Pour rappel REST lui calque son fonctinnement sur HTTP:
 
 @snapend 
 +++
-
+@snap[text-left]
 Pour GraphQl l'approche est differente: 
 
 @ul
@@ -59,7 +60,7 @@ Pour GraphQl l'approche est differente:
 
 L'ensemble des informations utiles sont donc contenu dans le BODY, 
 y compris les erreurs survenues.
-
+@snapend 
 +++
 @snap[west text-08]
 Des données adaptés au client:
