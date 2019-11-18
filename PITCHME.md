@@ -35,11 +35,8 @@
 
 @transition[slide-in slide-out]
 
-@snap[north]
 #### GraphQl une vision differente de REST
-
 ----
-@snapend 
 @snap[text-left]
 Graphql apporte une vision differente de la communication client / serveur </br>
 Ne s'appuie pas sur le protocole http comme REST
@@ -70,6 +67,9 @@ Pour GraphQl l'approche est differente:
 
 L'ensemble des informations utiles sont donc contenu dans le BODY, 
 y compris les erreurs survenues.
+
+
+
 +++
 @transition[slide-in slide-out]
 @snap[west text-08]
@@ -85,16 +85,17 @@ En REST, deux solutions existents:
 - Adapter chaque endpoint selon les données que le client désire 
 @snapend 
 
+
+
+
 +++?color=white
 @transition[slide-in slide-out]
 
+@snap[north span-30]
 #### Des Graphes
-----
 
 En GraphQl, le client va envoyer une requete comme ceci:
-
-</br>
-@snapend 
+@snapend
 
 @snap[south-west span-30 text-08]
 ```
@@ -115,17 +116,19 @@ body: query {
 ```
 @snapend 
 
-@snap[south-east span-60 text-left]
+@snap[south-east span-60 text-left text-06]
 Chaque donnée permet d’accéder dynamiquement à d’autres données et ainsi de théoriquement récupérer un graphe complet.
 
 Théoriquement car cout serveur plus important, si beaucoup d'imbrication.
 @snapend
 
 
+
+
+
 +++
-@snap[north]
+
 #### Le schéma
-@snapend
 ----
 
 
@@ -136,14 +139,16 @@ Celui-ci définit les demandes en lecture (query) et en écriture (mutation).</b
 Le client peut donc demander au serveur les informations qu'il désire contenu dans le schéma.</br>
 
 
-+++?color=white
 
 
 
++++
+
+
+@snap[west span-30 text-08]
 Definir un schema
 
 ```
-
 type Project {
 
   name: String
@@ -153,16 +158,13 @@ type Project {
   contributors: [User]
 
 }
-
 ````
+@snapend
 
-
-+++?color=red
-
+@snap[west span-30 text-08]
 Requeter les données désirées: 
 
 ```
-
 {
 
   project(name: "GraphQL") {
@@ -172,15 +174,13 @@ Requeter les données désirées:
   }
 
 }
-
 ```
+@snapend
 
-+++
-
+@snap[west span-30 text-08]
 Recupérer des résultats: 
 
 ```
-
 {
 
   "project": {
@@ -190,14 +190,11 @@ Recupérer des résultats:
   }
 
 }
-
 ```
-
+@snapend
 
 ---
-@snap[north]
 #### Une documentation automatique du schéma d’API
-@snapend
 ----
 
 GraphQL fournit de base un mécanisme d’introspection permettant de ‘découvrir’ l’API fournie par un serveur donné.</br>
@@ -213,9 +210,8 @@ Grace a des outils tel que graphql-cli, ou bien encore graphiql, il est possible
 
 
 ---
-@snap[north]
+
 #### Maintenant place au code
-@snapend
 ----
 
 Le but est de créer un API GraphQL from scratch</br>
