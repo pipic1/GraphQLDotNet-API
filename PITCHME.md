@@ -28,17 +28,18 @@
 
 +++
 
+@snap[north]
 #### GraphQl une vision differente de REST
-
+@snapend 
 ----
 @snap[text-left]
 Graphql apporte une vision differente de la communication client / serveur </br>
 Ne s'appuie pas sur le protocole http comme REST
-@snapend 
+@snapend
 
 +++
 
-@snap[west text-08]
+@snap[west]
 Pour rappel REST lui calque son fonctinnement sur HTTP:
 
 @ul
@@ -76,8 +77,10 @@ En REST, deux solutions existents:
 @snapend 
 
 +++?color=white
-@snap[north span-100]
-## Des Graphes
+@snap[north]
+#### Des Graphes
+@snapend
+----
 
 En GraphQl, le client va envoyer une requete comme ceci:
 
@@ -103,7 +106,7 @@ body: query {
 ```
 @snapend 
 
-@snap[south-east span-60 text-08]
+@snap[south-east span-60 text-left]
 Chaque donnée permet d’accéder dynamiquement à d’autres données et ainsi de théoriquement récupérer un graphe complet.
 
 Théoriquement car cout serveur plus important, si beaucoup d'imbrication.
@@ -111,9 +114,9 @@ Théoriquement car cout serveur plus important, si beaucoup d'imbrication.
 
 
 +++
-
+@snap[north]
 #### Le schéma
-
+@snapend
 ----
 
 
@@ -124,7 +127,7 @@ Celui-ci définit les demandes en lecture (query) et en écriture (mutation).</b
 Le client peut donc demander au serveur les informations qu'il désire contenu dans le schéma.</br>
 
 
-+++
++++?color=white
 
 
 
@@ -145,7 +148,7 @@ type Project {
 ````
 
 
-+++
++++?color=red
 
 Requeter les données désirées: 
 
@@ -183,9 +186,9 @@ Recupérer des résultats:
 
 
 ---
-
+@snap[north]
 #### Une documentation automatique du schéma d’API
-
+@snapend
 ----
 
 GraphQL fournit de base un mécanisme d’introspection permettant de ‘découvrir’ l’API fournie par un serveur donné.</br>
@@ -201,9 +204,9 @@ Grace a des outils tel que graphql-cli, ou bien encore graphiql, il est possible
 
 
 ---
-
-Maintenant place au code
-
+@snap[north]
+#### Maintenant place au code
+@snapend
 ----
 
 Le but est de créer un API GraphQL from scratch</br>
@@ -213,15 +216,15 @@ La structure sera simple une API permettant de gérer une TodoList.
 +++
 
 @snap[north-east span-100]
-@box[bg-purple text-white](Creer un nouvelle solution:#`dotnet new sln`)
+@box(Creer un nouvelle solution:#`dotnet new sln`)
 @snapend
 
 @snap[east span-100]
-@box[bg-orange text-white](Et deux projet:#`dotnet new classlib TodoList`</br>`dotnet new webapi -n WebApiTodoList`)
+@box(Et deux projet:#`dotnet new classlib TodoList`</br>`dotnet new webapi -n WebApiTodoList`)
 @snapend
 
 @snap[south-east span-100]
-@box[bg-pink text-white](On les ajoutent a la solution#`dotnet sln add TodoList`</br>`dotnet sln add WebApiTodoList`)
+@box(On les ajoutent a la solution#`dotnet sln add TodoList`</br>`dotnet sln add WebApiTodoList`)
 @snapend
 
 +++ 
