@@ -48,23 +48,23 @@ Ne s'appuie pas sur le protocole http comme REST
 
 Pour rappel REST lui calque son fonctinnement sur HTTP:
 
-@ul
+<br>
 - une ressource = une url
 - réutilisation des verbes d’action(GET, PUT, …)
 - réutilisation des codes de statut (200, 404, …)
-@ulend
+
 
 +++
 @transition[slide-in slide-out]
 
 Pour GraphQl l'approche est differente: 
 
-@ul
+<br>
 - Une URL unique (généralement /graphql)
 - requète POST
 - Status toujours OK (200), sauf exception lié a l'authentification qui sera un 401 UNAUTHORIZED  
-@ulend
 
+<br>
 L'ensemble des informations utiles sont donc contenu dans le BODY, 
 y compris les erreurs survenues.
 
@@ -221,17 +221,13 @@ La structure sera simple une API permettant de gérer une TodoList.
 `dotnet new sln`
 
 </br>
-</br>
 #### Deux projet:
 `dotnet new classlib TodoList`
-</br>
 `dotnet new webapi -n WebApiTodoList`
 
 </br>
-</br>
 #### On les ajoutent a la solution
 `dotnet sln add TodoList`
-</br>
 `dotnet sln add WebApiTodoList`
 
 +++ 
@@ -276,6 +272,8 @@ Une classe SecondaryTodo qui hérite de TodoItem
 
 +++?code=TodoList/Types/TodoItem.cs&lang=csharp
 
++++
+
 ### Creation de l'interface avec GraphQL
 
 ----
@@ -287,6 +285,8 @@ Le constructeur ne prends aucun argument
 
 +++?code=TodoList/Types/TodoItemInterface.cs&lang=csharp
 
++++
+
 #### Créer un type GraphQL pour la classe ImportantTodo et SecondaryTodo
 
 ----
@@ -296,7 +296,9 @@ Cette classe permet de décrire l'ensemble des champs
 </br>
 Le constructeur prends le gestionnaire des données en argument (TodoListData)
 
-+++?code=TodoList/Types/ImportantTodo.cs&lang=csharp
++++?code=TodoList/Types/ImportantType.cs&lang=csharp
+
++++
 
 #### Création de l'enum du status d'une todo
 
@@ -308,5 +310,7 @@ Ainsi que l'ensemble des valeurs de l'enum comme suit:
 `AddValue("LOW", "The task is not started yet", 1);`
 
 +++?code=TodoList/Types/StatusEnum.cs&lang=csharp
+
++++
 
 
