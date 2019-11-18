@@ -300,9 +300,9 @@ Le constructeur prends le gestionnaire des données en argument (TodoListData)
 
 +++
 
-#### Création de l'enum du status d'une todo
+#### Création de l'enum du status d'un todo
 
----
+----
 Créer une enum: Priority, avec trois valeurs ( LOW, MEDIUM, HIGH )
 
 Créer une classe: PriorityEnum qui hérite de EnumerationGraphType<Priority>
