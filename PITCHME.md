@@ -49,7 +49,6 @@ Pour rappel REST lui calque son fonctinnement sur HTTP:
 @snapend 
 +++
 
-@snap[west text-08]
 Pour GraphQl l'approche est differente: 
 
 @ul
@@ -61,10 +60,7 @@ Pour GraphQl l'approche est differente:
 L'ensemble des informations utiles sont donc contenu dans le BODY, 
 y compris les erreurs survenues.
 
-@snapend 
-
 +++
-
 @snap[west text-08]
 Des données adaptés au client:
 
@@ -79,10 +75,10 @@ En REST, deux solutions existents:
 @snapend 
 
 +++
-
+@snap[north span-100]
 Des Graphes
 En GraphQl, le client va envoyer une requete comme ceci:
-
+@snapend 
 
 @snap[west span-30 text-08]
 ```
@@ -107,18 +103,22 @@ body: query {
 Chaque donnée permet d’accéder dynamiquement à d’autres données et ainsi de théoriquement récupérer un graphe complet.
 Théoriquement car cout serveur plus important, si beaucoup d'imbrication.
 @snapend
+
+
 +++
 @snap[west text-08]
 Le schéma
-
+----
 Mettre en place une API GraphQL nécessite l’écriture d’un schéma spécifique sur le serveur; 
 Celui-ci définit les demandes en lecture (query) et en écriture (mutation).
 Le client peut donc demander au serveur les informations qu'il désire contenu dans le schéma.
 @snapend 
+
+
 +++
 @snap[west text-08]
 Une documentation automatique du schéma d’API
-
+----
 GraphQL fournit de base un mécanisme d’introspection permettant de ‘découvrir’ l’API fournie par un serveur donné.
 Grace a des outils tel que graphql-cli, ou bien encore graphiql, il est possible d'explorer le schéma.
 @snapend 
