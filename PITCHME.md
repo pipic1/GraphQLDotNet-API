@@ -122,37 +122,17 @@ La structure sera simple une API permettant de gérer une TodoList.
 
 +++
 
-@snap[west span-45]
-# Step by Step
-@snapend
-
-@snap[north-east span-60]
+@snap[north-east span-100]
 @box[bg-purple text-white](Creer un nouvelle solution:#`dotnet new sln`)
 @snapend
 
-@snap[east span-60]
+@snap[east span-100]
 @box[bg-orange text-white](Et deux projet:#`dotnet new classlib TodoList`</br>`dotnet new webapi -n WebApiTodoList`)
 @snapend
 
-@snap[south-east span-60]
-@box[bg-pink text-white](On les ajoutent a la solution#`dotnet sln add TodoList``dotnet sln add WebApiTodoList`)
+@snap[south-east span-100]
+@box[bg-pink text-white](On les ajoutent a la solution#`dotnet sln add TodoList`</br>`dotnet sln add WebApiTodoList`)
 @snapend
-
-Creer un nouvelle solution: 
-
-`dotnet new sln`
-
-Et deux projet: 
-
-`dotnet new classlib TodoList`
-
-`dotnet new webapi -n WebApiTodoList`
-
-On les ajoutent a la solution: 
-
-`dotnet sln add TodoList`
-
-`dotnet sln add WebApiTodoList`
 
 +++ 
 
