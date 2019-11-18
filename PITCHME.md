@@ -83,6 +83,8 @@ En REST, deux solutions existents:
 Des Graphes
 En GraphQl, le client va envoyer une requete comme ceci:
 
+
+@snap[west span-30 text-08]
 ```
 GET /graphql
 
@@ -99,10 +101,12 @@ body: query {
     }
 }
 ```
+@snapend 
 
+@snap[east span-60 text-08]
 Chaque donnée permet d’accéder dynamiquement à d’autres données et ainsi de théoriquement récupérer un graphe complet.
 Théoriquement car cout serveur plus important, si beaucoup d'imbrication.
-
+@snapend
 +++
 @snap[west text-08]
 Le schéma
