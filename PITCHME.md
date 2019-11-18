@@ -5,16 +5,16 @@
 
 ---
 
-## - Présentation
+## 1 - Présentation de GraphQL 
 
-## - Les différentes approches
+## 2 - Les différentes approches
 
-## - Codons!
+## 3 - Place au code
 
 
 ---
 
-## Présentation
+## Présentation de GraphQL 
 
 +++
 
@@ -28,75 +28,80 @@
 
 +++
 
-- Un schema clairement défini
+GraphQl une vision differente de REST
 
-- Query : recupération des données
-
-- Mutation : modification de données
-
-- Subscription : abonnement ( web socket 
-)
-
+Graphql apporte une vision differente de la communication client / serveur 
+Ne s'appuie pas sur le protocole http comme REST
 
 +++
 
-## Première étape 
+Pour rappel REST lui calque son fonctinnement sur HTTP:
 
-@snap[east text-06 text-white span-32] @quote[GitPitch Desktop with speaker notes is AMAZING!](@fa[twitter] @davetapley) @snapend
-
-Definir un schema
-
-```
-
-type Project {
-
-  name: String
-
-  tagline: String
-
-  contributors: [User]
-
-}
-
-````
-
+    une ressource = une url
+    réutilisation des verbes d’action(GET, PUT, …)
+    réutilisation des codes de statut (200, 404, …)
 
 +++
 
-Requeter les données désirées: 
+Pour GraphQl l'approche est differente: 
 
-```
-
-{
-
-  project(name: "GraphQL") {
-
-    tagline
-
-  }
-
-}
-
-```
+    Une URL unique (généralement /graphql)
+    requète POST
+    Status toujours OK (200), sauf exception lié a l'authentification qui sera un 401 UNAUTHORIZED  
+    L'ensemble des informations utiles sont donc contenu dans le BODY, y compris les erreurs survenues.
 
 +++
 
-Recupérer des résultats: 
+Des données adaptés au client:
 
-```
+    La force de graphql réside dans le fait que le client peut spécifié les données qu'il souhaite récupéré. 
+    Cas d'usage: 
+    Pour afficher une liste d'utilisateur, on ne souhaite que récupérer le nom, le prénom et la photo de profil
+    Pour afficher l'utilisateur en lui meme, on désire plus de données, les amis en communs, l'age, etc.
 
-{
+    En REST, deux solutions existents:
+        - Laisser le client trier et afficher les données qu'il souhaite
+        - Adapter chaque endpoint selon les données que le client désire 
 
-  "project": {
++++
 
-    "tagline": "A query language for APIs"
+Des Graphes
+    En GraphQl, le client va envoyer une requete comme ceci:
 
-  }
+    ```
+    GET /graphql
 
-}
+    body: query {
+        //MAIL
+        mails {
+            id
+            subject
+            //USER
+            sender {
+                firstname
+                lastname
+            }
+        }
+    }
+    ```
 
-```
+Chaque donnée permet d’accéder dynamiquement à d’autres données et ainsi de théoriquement récupérer un graphe complet.
+Théoriquement car cout serveur plus important, si beaucoup d'imbrication.
 
++++
+
+Le schéma
+
+Mettre en place une API GraphQL nécessite l’écriture d’un schéma spécifique sur le serveur; 
+Celui-ci définit les demandes en lecture (query) et en écriture (mutation).
+Le client peut donc demander au serveur les informations qu'il désire contenu dans le schéma.
+
++++
+
+Une documentation automatique du schéma d’API
+
+GraphQL fournit de base un mécanisme d’introspection permettant de ‘découvrir’ l’API fournie par un serveur donné.
+Grace a des outils tel que graphql-cli, ou bien encore graphiql, il est possible d'explorer le schéma.
 
 ---
 
@@ -107,15 +112,63 @@ Recupérer des résultats:
 ## Schéma first approche
 
 
-+++
+----
 
-## Code first approche
+Maintenant place au code 
 
-+++
+Le but est de créer un API GraphQL from scratch
+L'approche sera orienté données, création de la strucutre des données en amont . 
+La structure sera simple une API permettant de gérer une TodoList.
+
++++ 
+
+Creer un nouvelle solution: 
+
+`dotnet new sln`
+
+Et deux projet: 
+
+`dotnet new classlib TodoList`
+
+`dotnet new webapi -n WebApiTodoList`
+
+On les ajoutent a la solution: 
+
+`dotnet sln add TodoList`
+
+`dotnet sln add WebApiTodoList`
+
++++ 
+
+Créer tout les fichiers necessaires:
+
+powershell:
+
+```
+
+cd TodoList
+
+mkdir Types
+
+cd .\Types\
+
+New-Item -ItemType file TodoItem.cs
+
+New-Item -ItemType file TodoItemInterface.cs
+
+New-Item -ItemType file SecondaryTodo.cs
+
+New-Item -ItemType file ImportantTodo.cs
+
+New-Item -ItemType file StatusEnum.cs
+
+```
+
++++?code=TodoList/Types/TodoItem.cs&lang=csharp
+
++++?code=TodoList/Types/TodoItemInterface.cs&lang=csharp
 
 
-## TEST 1 
-## TEST 1 
 
 
-+++
+
