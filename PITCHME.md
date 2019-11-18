@@ -91,10 +91,10 @@ En REST, deux solutions existents:
 +++?color=white
 @transition[slide-in slide-out]
 
-@snap[north span-30]
+@snap[north span-100]
 #### Des Graphes
 
-En GraphQl, le client va envoyer une requete comme ceci:
+Le client va envoyer une requete comme ceci:
 @snapend
 
 @snap[south-west span-30 text-08]
@@ -185,7 +185,7 @@ Recupérer des résultats:
 }
 ```
 
----
++++
 #### Une documentation automatique du schéma d’API
 ----
 
@@ -202,7 +202,7 @@ Grace a des outils tel que graphql-cli, ou bien encore graphiql, il est possible
 
 +++
 
-## Schéma first approche
+## Code first approche
 
 
 ---
@@ -259,13 +259,54 @@ New-Item -ItemType file ImportantTodo.cs
 New-Item -ItemType file StatusEnum.cs
 
 ```
++++
+
+### Creation des objets
+
+Une classe abstraite TodoItem qui contient les proriétés:
+- ID
+- Name 
+- Description
+- RelatedTo
+<br>
+Une classe ImportantTodo qui hérite de TodoItem
+<br>
+Une classe SecondaryTodo qui hérite de TodoItem
+
 
 +++?code=TodoList/Types/TodoItem.cs&lang=csharp
 
+### Creation de l'interface avec GraphQL
+
+----
+Créer une interface TodoItemInterface.cs qui hérite de InterfaceGraphType<TodoItem>
+</br>
+Cette classe permet de décrire l'ensemble des champs
+</br>
+Le constructeur ne prends aucun argument
+
 +++?code=TodoList/Types/TodoItemInterface.cs&lang=csharp
 
+#### Créer un type GraphQL pour la classe ImportantTodo et SecondaryTodo
+
+----
+Créer une classe ImportantType qui hérite de ObjectGraphType<ImportantTodo>
+</br>
+Cette classe permet de décrire l'ensemble des champs
+</br>
+Le constructeur prends le gestionnaire des données en argument (TodoListData)
+
++++?code=TodoList/Types/ImportantTodo.cs&lang=csharp
+
+#### Création de l'enum du status d'une todo
 
 ---
+Créer une enum: Priority, avec trois valeurs ( LOW, MEDIUM, HIGH )
+Créer une classe: PriorityEnum qui hérite de EnumerationGraphType<Priority>
+Son constructeur set les proriétés Name, Description.
+Ainsi que l'ensemble des valeurs de l'enum comme suit:
+`AddValue("LOW", "The task is not started yet", 1);`
 
++++?code=TodoList/Types/StatusEnum.cs&lang=csharp
 
 
