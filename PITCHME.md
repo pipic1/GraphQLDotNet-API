@@ -161,7 +161,7 @@ type Project {
 ````
 @snapend
 
-@snap[west span-30 text-08]
+@snap[ span-30 text-08]
 Requeter les données désirées: 
 
 ```
@@ -177,7 +177,7 @@ Requeter les données désirées:
 ```
 @snapend
 
-@snap[west span-30 text-08]
+@snap[east span-30 text-08]
 Recupérer des résultats: 
 
 ```
