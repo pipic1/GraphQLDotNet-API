@@ -615,11 +615,11 @@ Il expose une propriété **User** de type **ClaimsPrincipal**.
 
 ----
 
-Dans la méthode **configure**, make the app use:
+Dans la méthode **configure**, l'argument **app** doit utiliser:
 
 - GraphQL: `UseGraphQL<ISchema>();`
 
-- Playground: `UseGraphQLPlayground();`
+- Ui Playground: `UseGraphQLPlayground();`
 
 +++
 @transition[slide-in slide-out]
@@ -629,7 +629,7 @@ Dans la méthode **configure**, make the app use:
 
 Ajout des différents singleton, avec les différents Type GraphQL. 
 
-Copier-coller le fichier suivant: [Program](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/WebApiTodoList/Program.cs)
+Copier-coller le fichier suivant: [Startup](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/WebApiTodoList/Startup.cs)
 
 +++
 @transition[slide-in slide-out]
@@ -648,6 +648,68 @@ Démarrez votre WebApi.
 Puis, lancez: 
 
 [/ui/playground](http://localhost:3000/ui/playground)
+
+
++++
+
+#### Lancer une Query
+
+----
+
+```
+query GetImportantTodos {
+  importanttodos {
+    description
+    id
+    name
+    priority
+  }
+}
+```
++++
+
+#### Lancer une Query avec argument
+
+----
+
+```
+query GetTodo {
+  important(id: "1") {
+    id
+    name
+    description
+    priority
+  }
+}
+```
++++
+
+#### Lancer une Mutation avec variables
+
+----
+
+Mutation: 
+
+```
+mutation CreateTaskImportant($task: ImportantTodoInput!) {
+  createImportantTask(task: $task) {
+    id
+    name
+  }
+}
+```
+
+Variable: 
+
+```
+{
+  "task": {
+    "name": "Acheter du lait",
+    "description": "2 bouteilles de 1L"
+  }
+}
+```
+
 
 
 ---
