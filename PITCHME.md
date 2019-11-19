@@ -337,18 +337,19 @@ New-Item -ItemType file StatusEnum.cs
 
 Créer tout les fichiers necessaires:
 
-@fa[folder](TodoList)
- * @fa[folder](Types)
-    *   @fa[file-code](TodoItem.cs)
-    *   @fa[file-code](TodoItemInterface.cs)
-    *   @fa[file-code](SecondaryTodo.cs)
-    *   @fa[file-code](ImportantTodo.cs)
-    *   @fa[file-code](StatusEnum.cs)
- * @fa[file-code](TodoListData.cs)
- * @fa[file-code](TodoListQuery.cs)
- * @fa[file-code](TodoListMutation.cs)
- * @fa[file-code](TodoListSchema.cs)
-@fa[folder](WebApiTodoList)
+* @fa[folder] TodoList
+     * @fa[folder] Types
+            *   @fa[file-code] TodoItem.cs
+            *   @fa[file-code] TodoItemInterface.cs
+            *   @fa[file-code] SecondaryTodo.cs
+            *   @fa[file-code] ImportantTodo.cs
+            *   @fa[file-code] StatusEnum.cs
+     * @fa[file-code] TodoListData.cs 
+     * @fa[file-code] TodoListQuery.cs 
+     * @fa[file-code] TodoListMutation.cs
+     * @fa[file-code] TodoListSchema.cs
+ 
+* @fa[folder] WebApiTodoList 
 
 +++
 
