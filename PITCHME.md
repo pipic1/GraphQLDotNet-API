@@ -85,8 +85,8 @@ La force de graphql réside dans le fait que le client peut spécifié les donn�
 
 - Pour afficher une liste d'utilisateur, on ne souhaite que récupérer le nom, le prénom et la photo de profil.
 - Pour afficher l'utilisateur en lui meme, on désire plus de données, les amis en communs, l'age, etc.
-
-En REST, deux solutions existents:
+<br><br>
+ 	__En REST, deux solutions existents:__
 
 - Laisser le client trier et afficher les données qu'il souhaite
 - Adapter chaque endpoint selon les données que le client désire 
@@ -100,7 +100,7 @@ En REST, deux solutions existents:
 Le client va envoyer une requete comme ceci:
 @snapend
 
-@snap[south-west span-30 text-08]
+@snap[west span-30 text-08]
 ```
 GET /graphql
 
@@ -117,7 +117,7 @@ body: query {
 ```
 @snapend 
 
-@snap[south-east span-60 text-left]
+@snap[east span-60 text-left]
 Chaque donnée permet d’accéder dynamiquement à d’autres données et ainsi de théoriquement récupérer un graphe complet.
 
 Théoriquement car cout serveur plus important, si beaucoup d'imbrication.
@@ -150,7 +150,9 @@ Le client peut donc demander au serveur les informations qu'il désire contenu d
 
 
 +++
-Def@transition[slide-in slide-out]inir un schema
+@transition[slide-in slide-out]
+
+## Definir un schema
 
 ```
 type Project {
@@ -167,7 +169,9 @@ type Project {
 
 
 +++
-Req@transition[slide-in slide-out]ueter les données désirées: 
+@transition[slide-in slide-out]
+
+## Requeter les données désirées: 
 
 ```
 {
@@ -184,7 +188,9 @@ Req@transition[slide-in slide-out]ueter les données désirées:
 
 
 +++
-Rec@transition[slide-in slide-out]upérer des résultats: 
+@transition[slide-in slide-out]
+
+## Recupérer des résultats: 
 
 ```
 {
@@ -390,9 +396,13 @@ Une classe SecondaryTodo qui hérite de TodoItem
 
 [TodoItem](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/Types/TodoItem.cs)
 
+
+
+
 +++
 @transition[slide-in slide-out]
-### Creation de l'interface avec GraphQL
+
+#### Creation de l'interface avec GraphQL
 
 ----
 Créer une interface TodoItemInterface.cs qui hérite de InterfaceGraphType<TodoItem>
@@ -403,8 +413,12 @@ Le constructeur ne prends aucun argument
 
 [TodoItemInterface](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/Types/TodoItemInterface.cs)
 
+
+
+
 +++
 @transition[slide-in slide-out]
+
 #### Créer un type GraphQL pour la classe ImportantTodo et SecondaryTodo
 
 ----
@@ -412,11 +426,11 @@ Créer une classe **ImportantType** qui hérite de **ObjectGraphType<ImportantTo
     
 Cette classe permet de décrire chaque type ImportantTodo
 
-`Name = "ImportantTodo";`
+- `Name = "ImportantTodo";`
 
-`Description = "This is an important task.";`
+- `Description = "This is an important task.";`
 
-`Field(h => h.Id).Description("The id of the Important Task.");`
+- `Field(h => h.Id).Description("The id of the Important Task.");`
 
 Le constructeur prends le gestionnaire des données en argument (TodoListData)
 
@@ -424,8 +438,12 @@ Le constructeur prends le gestionnaire des données en argument (TodoListData)
 
 [SecondaryType](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/Types/SecondaryType.cs)
 
+
+
+
 +++
 @transition[slide-in slide-out]
+
 #### Création de l'enum du status d'un todo
 
 ----
@@ -471,10 +489,15 @@ Exemple:
 Plusieurs methodes a créer afin de gérer les données:
 
 - Task<ImportantTodo> **GetImportantTodoByIdAsync**(string id)
+
 - Task<SecondaryTodo> **GetSecondaryTodoByIdAsync**()
+
 - Task<List<SecondaryTodo>> **GetSecondaryTodoAsync**()
+
 - Task<List<ImportantTodo>> **GetPrimaryTodoAsync**()
+
 - ImportantTodo **AddImportantTodo**(ImportantTodo task)
+
 - IEnumerable<TodoItem> **GetRelatedTask**(string id)
 
 +++
@@ -509,7 +532,9 @@ La propriété Name est égal à `ImportantTodoInput`
 Ainsi que 3 Field GraphQL:
 
 - Name
+
 - Description
+
 - Priority
 
 [TodoListData](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/TodoListData.cs)
