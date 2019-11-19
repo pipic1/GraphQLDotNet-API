@@ -217,17 +217,52 @@ La structure sera simple une API permettant de gérer une TodoList.
 
 +++
 
+## Première partie:
+
+----
+
+@ol
+
+- Objets
+- Jeu de données
+- TypeGraphQL
+- Query
+- Mutation
+- Schema
+
+@olend
+
++++
+
+## Seconde partie:
+
+----
+
+@ol
+
+- Démarrage de l'API
+- Découverte de `ui/playground`
+
+@olend
+
++++
+
 #### Creer un nouvelle solution:
+
 `dotnet new sln`
 
 </br>
 #### Deux projet:
+
 `dotnet new classlib TodoList`
+
 `dotnet new webapi -n WebApiTodoList`
 
 </br>
 #### On les ajoutent a la solution
+
 `dotnet sln add TodoList`
+
 `dotnet sln add WebApiTodoList`
 
 +++ 
