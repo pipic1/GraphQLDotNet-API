@@ -38,12 +38,16 @@
 #### GraphQl une vision differente de REST
 ----
 @snap[text-left]
-Graphql apporte une vision differente de la communication client / serveur </br>
-Ne s'appuie pas sur le protocole http comme REST
+Graphql apporte une vision differente de la communication client / serveur.
+</br></br>
+Utilisation des Query et Mutation:
+
+- Query: Recupération de données
+- Mutation: Modification de données
+
 @snapend
 
 +++
-
 @transition[slide-in slide-out]
 
 Pour rappel REST lui calque son fonctinnement sur HTTP:
@@ -102,11 +106,9 @@ Le client va envoyer une requete comme ceci:
 GET /graphql
 
 body: query {
-    //MAIL
     mails {
         id
         subject
-        //USER
         sender {
             firstname
             lastname
@@ -191,6 +193,12 @@ Recupérer des résultats:
 
 GraphQL fournit de base un mécanisme d’introspection permettant de ‘découvrir’ l’API fournie par un serveur donné.</br>
 Grace a des outils tel que graphql-cli, ou bien encore graphiql, il est possible d'explorer le schéma.
+
++++
+#### Pour aller plus loin
+----
+
+![GraphQLSHEMA](/assets/image/graphql.png)
 
 ---
 
