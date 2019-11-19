@@ -136,7 +136,11 @@ Théoriquement car cout serveur plus important, si beaucoup d'imbrication.
 
 Mettre en place une API GraphQL nécessite l’écriture d’un schéma spécifique sur le serveur.</br>
 
-Celui-ci définit les demandes en lecture (query) et en écriture (mutation).</br>
+Celui-ci définit les typedefs et les resolvers:
+
+- les **typedefs** définissent l'ensemble des types du schéma.
+
+- les **resolvers** sont les demandes en lecture (**query**) et en écriture (**mutation**).</br>
 
 Le client peut donc demander au serveur les informations qu'il désire contenu dans le schéma.</br>
 
