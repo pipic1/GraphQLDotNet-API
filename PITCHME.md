@@ -375,9 +375,15 @@ Le constructeur ne prends aucun argument
 #### Créer un type GraphQL pour la classe ImportantTodo et SecondaryTodo
 
 ----
-Créer une classe ImportantType qui hérite de ObjectGraphType<ImportantTodo>
+Créer une classe **ImportantType** qui hérite de **ObjectGraphType<ImportantTodo>**
     
-Cette classe permet de décrire l'ensemble des champs
+Cette classe permet de décrire chaque type ImportantTodo
+
+`Name = "ImportantTodo";`
+
+`Description = "This is an important task.";`
+
+`Field(h => h.Id).Description("The id of the Important Task.");`
 
 Le constructeur prends le gestionnaire des données en argument (TodoListData)
 
@@ -405,17 +411,38 @@ Ainsi que l'ensemble des valeurs de l'enum comme suit:
 
 +++
 
-#### Gestion des datas
+#### Gestion des datas (1 / 2 )
 
 ----
 Classe publique (TodoListData) permettant de gérer l'ensemble des données.
 
-Deux champs contenant chacun une liste de **ImportantTodo** et de **SecondaryTodo**
+Deux champs liste **ImportantTodo** et **SecondaryTodo**
 
-Le constructeur créer quelque entités.
+Le constructeur créer quelques entités.
 
 [TodoListData](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/TodoListData.cs)
 
++++
+
+#### Gestion des datas ( 2 / 2 )
+
+----
+
+Exemple:
+
+`public Task<ImportantTodo> GetImportantTodoByIdAsync(string id)`
+`{`
+`    return Task.FromResult(_importantTodo.FirstOrDefault(h => h.Id == id));`
+`}`
+
+Plusieurs methodes a créer afin de gérer les données:
+
+- Task<ImportantTodo> **GetImportantTodoByIdAsync**(string id)
+- Task<SecondaryTodo> **GetSecondaryTodoByIdAsync**()
+- Task<List<SecondaryTodo>> **GetSecondaryTodoAsync**()
+- Task<List<ImportantTodo>> **GetPrimaryTodoAsync**()
+- ImportantTodo **AddImportantTodo**(ImportantTodo task)
+- IEnumerable<TodoItem> **GetRelatedTask**(string id)
 
 +++
 
@@ -435,6 +462,25 @@ Creer une classe qui étend `ObjectGraphType<object>`
 
 [TodoListQuery](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/TodoListQuery.cs)
 
++++
+
+#### Creation d'une InputType
+
+----
+L'input va permettre de fournir les données à la mutation afin de créer une nouvelle ImportantTask
+
+Cette classe **ImportantTodoInputType** étend ** InputObjectGraphType<ImportantTodo>**
+
+La propriété Name est égal à `ImportantTodoInput`
+
+Ainsi que 3 Field GraphQL:
+
+- Name
+- Description
+- Priority
+
+[TodoListData](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/TodoListData.cs)
+
 
 +++
 
@@ -448,7 +494,25 @@ Créer une mutation **createImportantTask** qui permet de créer une ImportantTo
 
 [TodoListMutation](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/TodoListMutation.cs)
 
++++
+
+#### Creation du schéma
+
+----
+
+Creer une classe **TodoListSchema** qui étend `Schema`
+
+Son constructeur prend en argument un **IServiceProvider**, à partir duquel on peut recupérer les deux services **TodoListQuery** & **TodoListQuery** via la méthode **GetRequiredService()**.
+
+Il possède deux propriétés :
+
+- Query
+
+- Mutation
+
+[TodoListSchema](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/TodoListSchema.cs)
+
 
 +++
 
-
+## FIN
