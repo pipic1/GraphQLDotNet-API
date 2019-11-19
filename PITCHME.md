@@ -308,31 +308,6 @@ La structure sera simple une API permettant de gérer une TodoList.
 
 `dotnet sln add WebApiTodoList`
 
-+++ 
-
-Créer tout les fichiers necessaires:
-
-powershell:
-
-```
-
-cd TodoList
-
-mkdir Types
-
-cd .\Types\
-
-New-Item -ItemType file TodoItem.cs
-
-New-Item -ItemType file TodoItemInterface.cs
-
-New-Item -ItemType file SecondaryTodo.cs
-
-New-Item -ItemType file ImportantTodo.cs
-
-New-Item -ItemType file StatusEnum.cs
-
-```
 +++
 
 Créer tout les fichiers necessaires:
@@ -353,7 +328,17 @@ Créer tout les fichiers necessaires:
 
 +++
 
-### Creation des objets
+#### Un petit script
+
+----
+
+Un powershell pour vous aider, à télécharger [ici](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/tree.ps1)
+
++++
+
+#### Creation des objets
+
+----
 
 Une classe abstraite TodoItem qui contient les proriétés:
 - ID
