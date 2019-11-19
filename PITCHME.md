@@ -304,6 +304,7 @@ Une classe ImportantTodo qui hérite de TodoItem
 <br>
 Une classe SecondaryTodo qui hérite de TodoItem
 
+[TodoItem](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/Types/TodoItem.cs)
 
 +++?code=TodoList/Types/TodoItem.cs&lang=csharp
 
@@ -318,6 +319,8 @@ Cette classe permet de décrire l'ensemble des champs
 </br>
 Le constructeur ne prends aucun argument
 
+[TodoItemInterface](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/Types/TodoItemInterface.cs)
+
 +++?code=TodoList/Types/TodoItemInterface.cs&lang=csharp
 
 +++
@@ -331,7 +334,9 @@ Cette classe permet de décrire l'ensemble des champs
 
 Le constructeur prends le gestionnaire des données en argument (TodoListData)
 
-[La solution](TodoList/Types/ImportantType.cs)
+[ImportantType](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/Types/ImportantType.cs)
+
+[SecondaryType](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/Types/SecondaryType.cs)
 
 +++?code=TodoList/Types/ImportantType.cs&lang=csharp
 
@@ -349,6 +354,8 @@ Son constructeur set les proriétés Name, Description.
 Ainsi que l'ensemble des valeurs de l'enum comme suit:
 
 `AddValue("LOW", "The task is not started yet", 1);`
+
+[StatusEnum](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/Types/StatusEnum.cs)
 
 +++?code=TodoList/Types/StatusEnum.cs&lang=csharp
 
