@@ -400,4 +400,50 @@ Ainsi que l'ensemble des valeurs de l'enum comme suit:
 
 +++
 
+#### Gestion des datas
+
+----
+Classe publique (TodoListData) permettant de gérer l'ensemble des données.
+
+Deux champs contenant chacun une liste de **ImportantTodo** et de **SecondaryTodo**
+
+Le constructeur créer quelque entités.
+
+[TodoListData](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/TodoListData.cs)
+
+
++++
+
+#### Gestion des Query
+
+----
+
+Creer une classe qui étend `ObjectGraphType<object>`
+
+- une query pour récupérer une **ImportantTodo** grace a son **ID**
+
+- une query pour récupérer une **SecondaryTodo** grace a son **ID**
+
+- une query pour récupérer toutes les **ImportantTodo** 
+
+- une query pour récupérer toutes les **SecondaryTodo**
+
+[TodoListQuery](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/TodoListQuery.cs)
+
+
++++
+
+#### Gestion des Mutations
+
+----
+
+Creer une classe **TodoListMutation** qui étend `ObjectGraphType`
+
+Créer une mutation **createImportantTask** qui permet de créer une ImportantTodo
+
+[TodoListMutation](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/TodoListMutation.cs)
+
+
++++
+
 
