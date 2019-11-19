@@ -20,7 +20,6 @@
 ## Présentation de GraphQL 
 
 +++
-
 @transition[slide-in slide-out]
 
 - Crée par Facebook en 2012
@@ -37,15 +36,12 @@
 
 #### GraphQl une vision differente de REST
 ----
-</br></br>
+</br>
 
 Graphql apporte une vision differente de la communication client / serveur.
 
-Utilisation des Query et Mutation:
-
-- Query: Recupération de données
-- Mutation: Modification de données
-
+Il propose une alternative aux **API REST**, et se veut depuis septembre 2019,
+comme langage de requêtes standard destiné aux bases de données orientées graphes.
 
 
 +++
@@ -56,7 +52,6 @@ Utilisation des Query et Mutation:
 
 Pour rappel REST lui calque son fonctinnement sur HTTP:
 
-<br>
 - une ressource = une url
 - réutilisation des verbes d’action(GET, PUT, …)
 - réutilisation des codes de statut (200, 404, …)
@@ -69,12 +64,10 @@ Pour rappel REST lui calque son fonctinnement sur HTTP:
 ----
 Pour GraphQl l'approche est differente: 
 
-<br>
 - Une URL unique (généralement /graphql)
 - requète POST
 - Status toujours OK (200), sauf exception lié a l'authentification qui sera un 401 UNAUTHORIZED  
 
-<br>
 L'ensemble des informations utiles sont donc contenu dans le BODY, 
 y compris les erreurs survenues.
 
@@ -88,15 +81,15 @@ y compris les erreurs survenues.
 
 ----
 
-La force de graphql réside dans le fait que le client peut spécifié les données qu'il souhaite récupéré, exemple: </br>
+La force de graphql réside dans le fait que le client peut spécifié les données qu'il souhaite récupéré, exemple:
+
 - Pour afficher une liste d'utilisateur, on ne souhaite que récupérer le nom, le prénom et la photo de profil.
 - Pour afficher l'utilisateur en lui meme, on désire plus de données, les amis en communs, l'age, etc.
 
 En REST, deux solutions existents:
+
 - Laisser le client trier et afficher les données qu'il souhaite
 - Adapter chaque endpoint selon les données que le client désire 
-
-
 
 +++
 @transition[slide-in slide-out]
@@ -124,7 +117,7 @@ body: query {
 ```
 @snapend 
 
-@snap[south-east span-60 text-left text-06]
+@snap[south-east span-60 text-left]
 Chaque donnée permet d’accéder dynamiquement à d’autres données et ainsi de théoriquement récupérer un graphe complet.
 
 Théoriquement car cout serveur plus important, si beaucoup d'imbrication.
@@ -135,7 +128,7 @@ Théoriquement car cout serveur plus important, si beaucoup d'imbrication.
 
 
 +++
-
+@transition[slide-in slide-out]
 #### Le schéma
 ----
 
@@ -157,7 +150,7 @@ Le client peut donc demander au serveur les informations qu'il désire contenu d
 
 
 +++
-Definir un schema
+Def@transition[slide-in slide-out]inir un schema
 
 ```
 type Project {
@@ -174,7 +167,7 @@ type Project {
 
 
 +++
-Requeter les données désirées: 
+Req@transition[slide-in slide-out]ueter les données désirées: 
 
 ```
 {
@@ -191,7 +184,7 @@ Requeter les données désirées:
 
 
 +++
-Recupérer des résultats: 
+Rec@transition[slide-in slide-out]upérer des résultats: 
 
 ```
 {
@@ -209,7 +202,7 @@ Recupérer des résultats:
 
 
 +++
-
+@transition[slide-in slide-out]
 #### Une documentation automatique du schéma d’API
 ----
 
@@ -221,13 +214,15 @@ Grace a des outils tel que **graphql-cli**, ou bien encore **graphiql**, il est 
 
 
 +++
-
+@transition[slide-in slide-out]
 ![Schema](/assets/image/schema.png) 
 
 
 
 
 +++
+@transition[slide-in slide-out]
+
 #### Différentes sources de données
 ----
 
@@ -236,12 +231,14 @@ Vous pouvez récuperer des données de plusieurs source (REST endpoint, Database
 Le schéma va se focaliser sur ce que désire récupérer le client et en abstraire son origine 
 <br><br>
 L'implémentation d'une query appelant une autre API est tout a fait possible.
+<br><br>
+Plusieurs sources de données différentes peuvent cependant ralentir les temps de réponses.
 
 
 
 
 +++
-
+@transition[slide-in slide-out]
 @snap[south span-80]
 
 ![GraphQLSHEMA](/assets/image/graphql1.png)
@@ -258,10 +255,12 @@ L'implémentation d'une query appelant une autre API est tout a fait possible.
 ![CodeFirst](/assets/image/codefirst.png) 
 
 +++
-
+@transition[slide-in slide-out]
 ## Schéma first approche
 
 +++
+@transition[slide-in slide-out]
+
 #### La redaction du schéma avant tout
 
 ----
@@ -273,10 +272,11 @@ Possibilités de splitté les fichiers et de les merger avant executoin du sché
 </br></br>
 Lisibilité du schéma claire.
 +++
-
+@transition[slide-in slide-out]
 ## Code first approche (2019 +)
 
 +++
+@transition[slide-in slide-out]
 
 #### Un schema typé
 
@@ -297,7 +297,7 @@ L'approche sera orienté données, création de la strucutre des données en amo
 La structure sera simple une API permettant de gérer une TodoList.
 
 +++
-
+@transition[slide-in slide-out]
 ## Première partie:
 
 ----
@@ -314,7 +314,7 @@ La structure sera simple une API permettant de gérer une TodoList.
 @olend
 
 +++
-
+@transition[slide-in slide-out]
 ## Seconde partie:
 
 ----
@@ -327,7 +327,7 @@ La structure sera simple une API permettant de gérer une TodoList.
 @olend
 
 +++
-
+@transition[slide-in slide-out]
 #### Creer un nouvelle solution:
 
 `dotnet new sln`
@@ -347,7 +347,7 @@ La structure sera simple une API permettant de gérer une TodoList.
 `dotnet sln add WebApiTodoList`
 
 +++
-
+@transition[slide-in slide-out]
 Créer tout les fichiers necessaires:
 
 * @fa[folder] TodoList
@@ -365,7 +365,7 @@ Créer tout les fichiers necessaires:
 * @fa[folder] WebApiTodoList 
 
 +++
-
+@transition[slide-in slide-out]
 #### Un petit script
 
 ----
@@ -373,7 +373,7 @@ Créer tout les fichiers necessaires:
 Un powershell pour vous aider, à télécharger [ici](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/tree.ps1)
 
 +++
-
+@transition[slide-in slide-out]
 #### Creation des objets
 
 ----
@@ -391,7 +391,7 @@ Une classe SecondaryTodo qui hérite de TodoItem
 [TodoItem](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/Types/TodoItem.cs)
 
 +++
-
+@transition[slide-in slide-out]
 ### Creation de l'interface avec GraphQL
 
 ----
@@ -404,7 +404,7 @@ Le constructeur ne prends aucun argument
 [TodoItemInterface](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/Types/TodoItemInterface.cs)
 
 +++
-
+@transition[slide-in slide-out]
 #### Créer un type GraphQL pour la classe ImportantTodo et SecondaryTodo
 
 ----
@@ -425,7 +425,7 @@ Le constructeur prends le gestionnaire des données en argument (TodoListData)
 [SecondaryType](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/Types/SecondaryType.cs)
 
 +++
-
+@transition[slide-in slide-out]
 #### Création de l'enum du status d'un todo
 
 ----
@@ -443,7 +443,7 @@ Ainsi que l'ensemble des valeurs de l'enum comme suit:
 
 
 +++
-
+@transition[slide-in slide-out]
 #### Gestion des datas (1 / 2 )
 
 ----
@@ -456,7 +456,7 @@ Le constructeur créer quelques entités.
 [TodoListData](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/TodoListData.cs)
 
 +++
-
+@transition[slide-in slide-out]
 #### Gestion des datas ( 2 / 2 )
 
 ----
@@ -478,7 +478,7 @@ Plusieurs methodes a créer afin de gérer les données:
 - IEnumerable<TodoItem> **GetRelatedTask**(string id)
 
 +++
-
+@transition[slide-in slide-out]
 #### Gestion des Query
 
 ----
@@ -496,7 +496,7 @@ Creer une classe qui étend `ObjectGraphType<object>`
 [TodoListQuery](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/TodoListQuery.cs)
 
 +++
-
+@transition[slide-in slide-out]
 #### Creation d'une InputType
 
 ----
@@ -516,7 +516,7 @@ Ainsi que 3 Field GraphQL:
 
 
 +++
-
+@transition[slide-in slide-out]
 #### Gestion des Mutations
 
 ----
@@ -528,7 +528,7 @@ Créer une mutation **createImportantTask** qui permet de créer une ImportantTo
 [TodoListMutation](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/TodoListMutation.cs)
 
 +++
-
+@transition[slide-in slide-out]
 #### Creation du schéma
 
 ----
