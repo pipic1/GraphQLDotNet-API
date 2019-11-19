@@ -342,7 +342,7 @@ Créer tout les fichiers necessaires:
      * @fa[file-code] TodoListQuery.cs 
      * @fa[file-code] TodoListMutation.cs
      * @fa[file-code] TodoListSchema.cs
-      * @fa[folder] Types
+     * @fa[folder] Types
        * @fa[file-code] TodoItem.cs
        * @fa[file-code] TodoItemInterface.cs
        * @fa[file-code] SecondaryTodo.cs
