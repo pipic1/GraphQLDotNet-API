@@ -194,11 +194,10 @@ Recupérer des résultats:
 GraphQL fournit de base un mécanisme d’introspection permettant de ‘découvrir’ l’API fournie par un serveur donné.</br>
 Grace a des outils tel que graphql-cli, ou bien encore graphiql, il est possible d'explorer le schéma.
 
-+++
++++?image=/assets/image/graphql.png
 #### Pour aller plus loin
 ----
 
-![GraphQLSHEMA](/assets/image/graphql.png)
 
 ---
 
