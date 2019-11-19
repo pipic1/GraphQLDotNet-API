@@ -339,15 +339,15 @@ Créer tout les fichiers necessaires:
 
 * @fa[folder] TodoList
      * @fa[folder] Types
-            *   @fa[file-code] TodoItem.cs
-            *   @fa[file-code] TodoItemInterface.cs
-            *   @fa[file-code] SecondaryTodo.cs
-            *   @fa[file-code] ImportantTodo.cs
-            *   @fa[file-code] StatusEnum.cs
-     * @fa[file-code] TodoListData.cs 
-     * @fa[file-code] TodoListQuery.cs 
-     * @fa[file-code] TodoListMutation.cs
-     * @fa[file-code] TodoListSchema.cs
+            - @fa[file-code] TodoItem.cs
+            - @fa[file-code] TodoItemInterface.cs
+            - @fa[file-code] SecondaryTodo.cs
+            - @fa[file-code] ImportantTodo.cs
+            - @fa[file-code] StatusEnum.cs
+     - @fa[file-code] TodoListData.cs 
+     - @fa[file-code] TodoListQuery.cs 
+     - @fa[file-code] TodoListMutation.cs
+     - @fa[file-code] TodoListSchema.cs
  
 * @fa[folder] WebApiTodoList 
 
@@ -367,8 +367,6 @@ Une classe SecondaryTodo qui hérite de TodoItem
 
 [TodoItem](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/Types/TodoItem.cs)
 
-+++?code=TodoList/Types/TodoItem.cs&lang=csharp
-
 +++
 
 ### Creation de l'interface avec GraphQL
@@ -381,8 +379,6 @@ Cette classe permet de décrire l'ensemble des champs
 Le constructeur ne prends aucun argument
 
 [TodoItemInterface](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/Types/TodoItemInterface.cs)
-
-+++?code=TodoList/Types/TodoItemInterface.cs&lang=csharp
 
 +++
 
@@ -398,8 +394,6 @@ Le constructeur prends le gestionnaire des données en argument (TodoListData)
 [ImportantType](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/Types/ImportantType.cs)
 
 [SecondaryType](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/Types/SecondaryType.cs)
-
-+++?code=TodoList/Types/ImportantType.cs&lang=csharp
 
 +++
 
@@ -418,7 +412,6 @@ Ainsi que l'ensemble des valeurs de l'enum comme suit:
 
 [StatusEnum](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/Types/StatusEnum.cs)
 
-+++?code=TodoList/Types/StatusEnum.cs&lang=csharp
 
 +++
 
