@@ -198,7 +198,7 @@ Grace a des outils tel que graphql-cli, ou bien encore graphiql, il est possible
 #### Pour aller plus loin
 ----
 
-![GraphQLSHEMA](/assets/image/graphql.png)
+![GraphQLSHEMA](/assets/image/graphql1.png)
 
 ---
 
