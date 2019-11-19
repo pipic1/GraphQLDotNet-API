@@ -195,9 +195,18 @@ GraphQL fournit de base un mécanisme d’introspection permettant de ‘découv
 Grace a des outils tel que graphql-cli, ou bien encore graphiql, il est possible d'explorer le schéma.
 
 +++
-#### Pour aller plus loin
+#### Différentes sources de données
 ----
-@snap[span-80]
+
+Vous pouvez récuperer des données de plusieurs source (REST endpoint, Database).
+<br><br>
+Le schéma va se focaliser sur ce que désire récupérer le client et en abstraire son origine 
+<br><br>
+L'implémentation d'une query appelant une autre API est tout a fait possible.
+
+---
++++
+@snap[south span-80]
 ![GraphQLSHEMA](/assets/image/graphql1.png)
 @snapend
 ---
@@ -209,9 +218,22 @@ Grace a des outils tel que graphql-cli, ou bien encore graphiql, il est possible
 ## Schéma first approche
 
 +++
+#### La redaction du schéma avant tout
 
-## Code first approche
+----
+Faire de la conception de schéma une priorité du processus de développement.
+</br></br>
+Le schema est rédigé en une seul version texte qui est ensuite parsé.
+</br></br>
+Possibilités de splitté les fichiers et de les merger avant executoin du schéma
+</br></br>
+Lisibilité du schéma claire.
++++
 
+## Code first approche (2019 +)
+Programmé a la main, on defini un schéma clairement typé, avec des GraphQLObject.
+</br></br>
+Plus facile pour l'autocomplétion des IDE.
 
 ---
 
