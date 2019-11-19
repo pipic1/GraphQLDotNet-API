@@ -37,18 +37,22 @@
 
 #### GraphQl une vision differente de REST
 ----
-@snap[text-left]
-Graphql apporte une vision differente de la communication client / serveur.
 </br></br>
+
+Graphql apporte une vision differente de la communication client / serveur.
+
 Utilisation des Query et Mutation:
 
 - Query: Recupération de données
 - Mutation: Modification de données
 
-@snapend
+
 
 +++
 @transition[slide-in slide-out]
+
+#### REST
+----
 
 Pour rappel REST lui calque son fonctinnement sur HTTP:
 
@@ -61,6 +65,8 @@ Pour rappel REST lui calque son fonctinnement sur HTTP:
 +++
 @transition[slide-in slide-out]
 
+#### GraphQl
+----
 Pour GraphQl l'approche est differente: 
 
 <br>
@@ -76,23 +82,23 @@ y compris les erreurs survenues.
 
 +++
 @transition[slide-in slide-out]
-@snap[west text-08]
-Des données adaptés au client:
 
-La force de graphql réside dans le fait que le client peut spécifié les données qu'il souhaite récupéré. 
-Cas d'usage: </br>
-- Pour afficher une liste d'utilisateur, on ne souhaite que récupérer le nom, le prénom et la photo de profil
+
+#### Des données adaptés au client
+
+----
+
+La force de graphql réside dans le fait que le client peut spécifié les données qu'il souhaite récupéré, exemple: </br>
+- Pour afficher une liste d'utilisateur, on ne souhaite que récupérer le nom, le prénom et la photo de profil.
 - Pour afficher l'utilisateur en lui meme, on désire plus de données, les amis en communs, l'age, etc.
-</br></br>
+
 En REST, deux solutions existents:
 - Laisser le client trier et afficher les données qu'il souhaite
 - Adapter chaque endpoint selon les données que le client désire 
-@snapend 
 
 
 
-
-+++?color=white
++++
 @transition[slide-in slide-out]
 
 @snap[north span-100]
@@ -142,6 +148,8 @@ Celui-ci définit les typedefs et les resolvers:
 
 - les **resolvers** sont les demandes en lecture (**query**) et en écriture (**mutation**).</br>
 
+Remarque: il existe également les **subscriptions**, qui permettent de mettre en place du temps réel.
+
 Le client peut donc demander au serveur les informations qu'il désire contenu dans le schéma.</br>
 
 
@@ -162,6 +170,9 @@ type Project {
 
 }
 ````
+
+
+
 +++
 Requeter les données désirées: 
 
@@ -176,6 +187,9 @@ Requeter les données désirées:
 
 }
 ```
+
+
+
 +++
 Recupérer des résultats: 
 
@@ -191,6 +205,9 @@ Recupérer des résultats:
 }
 ```
 
+
+
+
 +++
 
 #### Une documentation automatique du schéma d’API
@@ -200,9 +217,15 @@ GraphQL fournit de base un mécanisme d’introspection permettant de ‘découv
 </br></br>
 Grace a des outils tel que **graphql-cli**, ou bien encore **graphiql**, il est possible d'explorer le schéma.
 
+
+
+
 +++
 
 ![Schema](/assets/image/schema.png) 
+
+
+
 
 +++
 #### Différentes sources de données
@@ -213,6 +236,9 @@ Vous pouvez récuperer des données de plusieurs source (REST endpoint, Database
 Le schéma va se focaliser sur ce que désire récupérer le client et en abstraire son origine 
 <br><br>
 L'implémentation d'une query appelant une autre API est tout a fait possible.
+
+
+
 
 +++
 
