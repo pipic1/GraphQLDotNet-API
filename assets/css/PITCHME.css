@@ -6,6 +6,10 @@
   font-family: "Open Sans", sans-serif;
 }
 
+.reveal p {
+ font-size: 80%; 
+}
+
 .reveal .slides > p {
    text-align:left;
 }
