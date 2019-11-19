@@ -192,17 +192,18 @@ Recupérer des résultats:
 ```
 
 +++
-@snap[west span-40 text-center]
+
 #### Une documentation automatique du schéma d’API
 ----
 
-GraphQL fournit de base un mécanisme d’introspection permettant de ‘découvrir’ l’API fournie par un serveur donné.</br>
+GraphQL fournit de base un mécanisme d’introspection permettant de ‘découvrir’ l’API fournie par un serveur donné.
+</br></br>
 Grace a des outils tel que **graphql-cli**, ou bien encore **graphiql**, il est possible d'explorer le schéma.
-@snapend 
 
-@snap[east span-40 text-center]
++++
+
 ![Schema](/assets/image/schema.png) 
-@snapend 
+
 +++
 #### Différentes sources de données
 ----
