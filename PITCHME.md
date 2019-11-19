@@ -34,11 +34,11 @@
 
 @transition[slide-in slide-out]
 
-#### GraphQl une vision differente de REST
+#### GraphQl une vision différente de REST
 ----
 </br>
 
-Graphql apporte une vision differente de la communication client / serveur.
+Graphql apporte une vision différente de la communication client / serveur.
 
 Il propose une alternative aux **API REST**, et se veut depuis septembre 2019,
 comme langage de requêtes standard destiné aux bases de données orientées graphes.
@@ -68,7 +68,7 @@ Pour GraphQl l'approche est differente:
 - requète POST
 - Status toujours OK (200), sauf exception lié a l'authentification qui sera un 401 UNAUTHORIZED  
 
-L'ensemble des informations utiles sont donc contenu dans le BODY, 
+L'ensemble des informations utiles sont donc contenues dans le BODY, 
 y compris les erreurs survenues.
 
 
@@ -77,18 +77,20 @@ y compris les erreurs survenues.
 @transition[slide-in slide-out]
 
 
-#### Des données adaptés au client
+#### Des données adaptées au client
 
 ----
 
-La force de graphql réside dans le fait que le client peut spécifié les données qu'il souhaite récupéré, exemple:
+La force de graphql réside dans le fait que le client peut spécifier les données qu'il souhaite récupérer, exemple:
 
-- Pour afficher une liste d'utilisateur, on ne souhaite que récupérer le nom, le prénom et la photo de profil.
-- Pour afficher l'utilisateur en lui meme, on désire plus de données, les amis en communs, l'age, etc.
+- Pour afficher une liste d'utilisateurs, on ne souhaite que récupérer le nom, le prénom et la photo de profil.
+
+- Pour afficher l'utilisateur en lui meme, on désire plus de données, les amis en commun, l'age, etc.
 <br><br>
  	__En REST, deux solutions existents:__
 
 - Laisser le client trier et afficher les données qu'il souhaite
+
 - Adapter chaque endpoint selon les données que le client désire 
 
 +++
@@ -97,7 +99,7 @@ La force de graphql réside dans le fait que le client peut spécifié les donn�
 @snap[north span-100]
 #### Des Graphes
 
-Le client va envoyer une requete comme ceci:
+Le client va envoyer une requète comme ceci:
 @snapend
 
 @snap[west span-30 text-08]
@@ -123,8 +125,9 @@ Chaque donnée permet d’accéder dynamiquement à d’autres données et ainsi
 Théoriquement car cout serveur plus important, si beaucoup d'imbrication.
 @snapend
 
++++ 
 
-
+![graphqlvsrest](/assets/image/graphqlvsrest.png)
 
 
 +++
@@ -152,7 +155,9 @@ Le client peut donc demander au serveur les informations qu'il désire contenu d
 +++
 @transition[slide-in slide-out]
 
-## Definir un schema
+#### Definir un schema
+
+----
 
 ```
 type Project {
@@ -171,7 +176,9 @@ type Project {
 +++
 @transition[slide-in slide-out]
 
-## Requeter les données désirées: 
+#### Requeter les données désirées: 
+
+----
 
 ```
 {
@@ -190,7 +197,9 @@ type Project {
 +++
 @transition[slide-in slide-out]
 
-## Recupérer des résultats: 
+#### Recupérer des résultats: 
+
+----
 
 ```
 {
@@ -214,7 +223,7 @@ type Project {
 
 GraphQL fournit de base un mécanisme d’introspection permettant de ‘découvrir’ l’API fournie par un serveur donné.
 </br></br>
-Grace a des outils tel que **graphql-cli**, ou bien encore **graphiql**, il est possible d'explorer le schéma.
+Grâce à des outils tels que **graphql-cli**, ou bien encore **graphiql**, il est possible d'explorer le schéma.
 
 
 
@@ -232,13 +241,13 @@ Grace a des outils tel que **graphql-cli**, ou bien encore **graphiql**, il est 
 #### Différentes sources de données
 ----
 
-Vous pouvez récuperer des données de plusieurs source (REST endpoint, Database).
+Vous pouvez récuperer des données de plusieurs sources (REST endpoint, Database).
 <br><br>
 Le schéma va se focaliser sur ce que désire récupérer le client et en abstraire son origine 
 <br><br>
-L'implémentation d'une query appelant une autre API est tout a fait possible.
+L'implémentation d'une query appelant une autre API est tout à fait possible.
 <br><br>
-Plusieurs sources de données différentes peuvent cependant ralentir les temps de réponses.
+Plusieurs sources de données différentes peuvent cependant ralentir les temps de réponse.
 
 
 
@@ -272,9 +281,9 @@ Plusieurs sources de données différentes peuvent cependant ralentir les temps 
 ----
 Faire de la conception de schéma une priorité du processus de développement.
 </br></br>
-Le schema est rédigé en une seul version texte qui est ensuite parsé.
+Le schéma est rédigé en une seule version texte qui est ensuite parsé.
 </br></br>
-Possibilités de splitté les fichiers et de les merger avant executoin du schéma
+Possibilités de splitter les fichiers et de les merger avant executoin du schéma
 </br></br>
 Lisibilité du schéma claire.
 +++
@@ -290,7 +299,7 @@ Lisibilité du schéma claire.
 
 Programmé a la main, on defini un schéma clairement typé, avec des GraphQLObject.
 </br></br>
-Plus facile pour l'autocomplétion des IDE.
+Plus facile pour l'auto-complétion des IDE.
 
 ---
 
@@ -615,7 +624,7 @@ Il expose une propriété **User** de type **ClaimsPrincipal**.
 
 ----
 
-Dans la méthode **configure**, l'argument **app** doit utiliser:
+Dans la méthode **configure**, l'argument **app** doit utilisé:
 
 - GraphQL: `UseGraphQL<ISchema>();`
 
@@ -627,7 +636,7 @@ Dans la méthode **configure**, l'argument **app** doit utiliser:
 
 ----
 
-Ajout des différents singleton, avec les différents Type GraphQL. 
+Ajout des différents singletons, avec les différents Type GraphQL. 
 
 Copier-coller le fichier suivant: [Startup](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/WebApiTodoList/Startup.cs)
 
