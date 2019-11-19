@@ -570,6 +570,85 @@ Il possède deux propriétés :
 
 [TodoListSchema](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/TodoListSchema.cs)
 
++++
+@transition[slide-in slide-out]
+## Seconde partie:
+
+----
+
+@ol
+
+- Démarrage de l'API
+  * UserContext
+  * Program
+  * Startup
+- Découverte de `ui/playground`
+
+@olend
+
+
++++
+@transition[slide-in slide-out]
+#### Démarrage de l'API - User context
+
+----
+
+Creer une classe **GraphQLUserContext** qui étend `Dictionary<string, object>`
+
+Il expose une propriété **User** de type **ClaimsPrincipal**.
+
+[GraphQLUserContext](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/WebApiTodoList/GraphQLUserContext.cs)
+
++++
+@transition[slide-in slide-out]
+#### Démarrage de l'API - Program
+
+----
+
+`public static Task Main(string[] args) => WebHost.CreateDefaultBuilder<Startup>(args).Build().RunAsync();`
+
+[Program](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/WebApiTodoList/Program.cs)
+
++++
+@transition[slide-in slide-out]
+#### Démarrage de l'API - Startup (1 / 2)
+
+----
+
+Dans la méthode **configure**, make the app use:
+
+- GraphQL: `UseGraphQL<ISchema>();`
+
+- Playground: `UseGraphQLPlayground();`
+
++++
+@transition[slide-in slide-out]
+#### Démarrage de l'API - Startup (2 / 2)
+
+----
+
+Ajout des différents singleton, avec les différents Type GraphQL. 
+
+Copier-coller le fichier suivant: [Program](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/WebApiTodoList/Program.cs)
+
++++
+@transition[slide-in slide-out]
+## Lancer l'API !
+
+----
+
+`dotnet restore`
+
+`dotnet build`
+
+Démarrez votre WebApi.
+
+`dotnet run -p .\WebApiTodoList`
+
+Puis, lancez: 
+
+[/ui/playground](http://localhost:3000/ui/playground)
+
 
 ---
 
