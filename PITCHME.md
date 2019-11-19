@@ -226,6 +226,11 @@ L'implémentation d'une query appelant une autre API est tout a fait possible.
 
 ## Les différentes approches
 
+----
+
+
+![CodeFirst](/assets/image/codefirst.png) 
+
 +++
 
 ## Schéma first approche
