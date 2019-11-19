@@ -6,7 +6,7 @@
   font-family: "Open Sans", sans-serif;
 }
 
-.reveal p {
+.reveal p, .reveal li  {
  font-size: 80%; 
 }
 
