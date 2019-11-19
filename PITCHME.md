@@ -214,11 +214,14 @@ Le schéma va se focaliser sur ce que désire récupérer le client et en abstra
 <br><br>
 L'implémentation d'une query appelant une autre API est tout a fait possible.
 
----
 +++
+
 @snap[south span-80]
+
 ![GraphQLSHEMA](/assets/image/graphql1.png)
+
 @snapend
+
 ---
 
 ## Les différentes approches
