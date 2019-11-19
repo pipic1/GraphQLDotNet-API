@@ -331,6 +331,8 @@ Cette classe permet de décrire l'ensemble des champs
 
 Le constructeur prends le gestionnaire des données en argument (TodoListData)
 
+[La solution](TodoList/Types/ImportantType.cs)
+
 +++?code=TodoList/Types/ImportantType.cs&lang=csharp
 
 +++
