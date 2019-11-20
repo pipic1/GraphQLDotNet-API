@@ -396,7 +396,7 @@ Un powershell pour vous aider, à télécharger [ici](https://raw.githubusercont
 
 ----
 
-Une classe abstraite TodoItem qui contient les proriétés:
+Une classe abstraite **TodoItem** qui contient les proriétés:
 
 - ID
 
@@ -406,10 +406,9 @@ Une classe abstraite TodoItem qui contient les proriétés:
 
 - RelatedTo
 
+Une classe **ImportantTodo** qui hérite de **TodoItem**, il possède une propriété en plus **Priority** de type **int**
 <br>
-Une classe ImportantTodo qui hérite de TodoItem
-<br>
-Une classe SecondaryTodo qui hérite de TodoItem
+Une classe **SecondaryTodo** qui hérite de **TodoItem**
 
 [TodoItem](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/Types/TodoItem.cs)
 
@@ -436,7 +435,7 @@ Le constructeur ne prends aucun argument, il définit cependant:
 
 [TodoItemInterface](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/Types/TodoItemInterface.cs)
 
-
++++?code=/TodoList/Types/TodoItemInterface.cs&lang=csharp
 
 
 +++
@@ -553,7 +552,7 @@ Cette classe **ImportantTodoInputType** étend ** InputObjectGraphType<Important
 
 La propriété Name est égal à `ImportantTodoInput`
 
-Ainsi que 3 Field GraphQL appartenant au type **ImportantTodo**:
+Ainsi que 3 Fields GraphQL appartenant au type **ImportantTodo**:
 
 - Name
 
