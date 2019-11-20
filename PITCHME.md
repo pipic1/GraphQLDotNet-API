@@ -52,9 +52,11 @@ comme langage de requêtes standard destiné aux bases de données orientées gr
 
 Pour rappel REST lui calque son fonctinnement sur HTTP:
 
-- une ressource = une url
-- réutilisation des verbes d’action(GET, PUT, …)
-- réutilisation des codes de statut (200, 404, …)
+ - une ressource = une url
+
+ - réutilisation des verbes d’action(GET, PUT, …)
+
+ - réutilisation des codes de statut (200, 404, …)
 
 
 +++
@@ -64,9 +66,11 @@ Pour rappel REST lui calque son fonctinnement sur HTTP:
 ----
 Pour GraphQl l'approche est differente: 
 
-- Une URL unique (généralement /graphql)
-- requète POST
-- Status toujours OK (200), sauf exception lié a l'authentification qui sera un 401 UNAUTHORIZED  
+ - Une URL unique (généralement /graphql)
+
+ - requète POST
+
+ - Status toujours OK (200), sauf exception lié a l'authentification qui sera un 401 UNAUTHORIZED  
 
 L'ensemble des informations utiles sont donc contenues dans le BODY, 
 y compris les erreurs survenues.
@@ -94,7 +98,6 @@ La force de graphql réside dans le fait que le client peut spécifier les donn�
 - Adapter chaque endpoint selon les données que le client désire 
 
 +++
-@transition[slide-in slide-out]
 
 @snap[north span-100]
 #### Des Graphes
@@ -197,7 +200,7 @@ type Project {
 +++
 @transition[slide-in slide-out]
 
-#### Recupérer des résultats: 
+#### Recupérer des résultats prédictifs: 
 
 ----
 
