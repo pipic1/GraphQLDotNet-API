@@ -50,7 +50,7 @@ comme langage de requêtes standard destiné aux bases de données orientées gr
 #### REST
 ----
 
-Pour rappel REST lui calque son fonctinnement sur HTTP:
+Pour rappel REST lui calque son fonctionnement sur HTTP:
 
  - une ressource = une url
 
