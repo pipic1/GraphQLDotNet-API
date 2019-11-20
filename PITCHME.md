@@ -89,13 +89,13 @@ La force de graphql réside dans le fait que le client peut spécifier les donn�
 
 - Pour afficher une liste d'utilisateurs, on ne souhaite que récupérer le nom, le prénom et la photo de profil.
 
-- Pour afficher l'utilisateur en lui meme, on désire plus de données, les amis en commun, l'age, etc.
+- Pour afficher l'utilisateur en lui-meme, on désire plus de données, les amis en commun, l'age, etc.
 <br><br>
- 	__En REST, deux solutions existents:__
+En REST, deux solutions existent:
 
-- Laisser le client trier et afficher les données qu'il souhaite
+- Laisser le client trier et afficher les données qu'il souhaite.
 
-- Adapter chaque endpoint selon les données que le client désire 
+- Adapter chaque endpoint selon les données que le client désire.
 
 +++
 
@@ -300,7 +300,7 @@ Lisibilité du schéma claire.
 
 ----
 
-Programmé a la main, on defini un schéma clairement typé, avec des GraphQLObject.
+Programmé à la main, on definit un schéma clairement typé, avec des GraphQLObject.
 </br></br>
 Plus facile pour l'auto-complétion des IDE.
 
@@ -417,11 +417,17 @@ Une classe SecondaryTodo qui hérite de TodoItem
 #### Creation de l'interface avec GraphQL
 
 ----
-Créer une interface TodoItemInterface.cs qui hérite de InterfaceGraphType<TodoItem>
-</br>
-Cette classe permet de décrire l'ensemble des champs
-</br>
-Le constructeur ne prends aucun argument
+Créer une interface **TodoItemInterface.cs** qui hérite de **InterfaceGraphType<TodoItem>**
+
+Cette classe permet de décrire l'ensemble des champs, dans le schéma
+
+Le constructeur ne prends aucun argument, il définit cependant:
+
+- Une propriété **Name** contenant le nom **TodoItem** 
+
+- Aisni que tout les champs, comme suit: 
+
+ `Field(d => d.Id).Description("The id of the todo task.");`
 
 [TodoItemInterface](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/Types/TodoItemInterface.cs)
 
@@ -436,7 +442,7 @@ Le constructeur ne prends aucun argument
 ----
 Créer une classe **ImportantType** qui hérite de **ObjectGraphType<ImportantTodo>**
     
-Cette classe permet de décrire chaque type ImportantTodo
+Cette classe permet de décrire chaque champs du type **ImportantTodo**
 
 - `Name = "ImportantTodo";`
 
@@ -459,11 +465,11 @@ Le constructeur prends le gestionnaire des données en argument (TodoListData)
 #### Création de l'enum du status d'un todo
 
 ----
-Créer une enum: Priority, avec trois valeurs ( LOW, MEDIUM, HIGH )
+1 - Créer une enum: **Priority**, avec trois valeurs ( LOW, MEDIUM, HIGH )
 
-Créer une classe: PriorityEnum qui hérite de EnumerationGraphType<Priority>
+2 - Créer une classe: **PriorityEnum** qui hérite de **EnumerationGraphType<Priority>**
     
-Son constructeur set les proriétés Name, Description.
+Son constructeur set les proriétés **Name**, **Description**.
 
 Ainsi que l'ensemble des valeurs de l'enum comme suit:
 
@@ -518,7 +524,7 @@ Plusieurs methodes a créer afin de gérer les données:
 
 ----
 
-Creer une classe qui étend `ObjectGraphType<object>`
+Creer une classe **TodoListQuery** qui étend `ObjectGraphType<object>`
 
 - une query pour récupérer une **ImportantTodo** grace a son **ID**
 
@@ -541,7 +547,7 @@ Cette classe **ImportantTodoInputType** étend ** InputObjectGraphType<Important
 
 La propriété Name est égal à `ImportantTodoInput`
 
-Ainsi que 3 Field GraphQL:
+Ainsi que 3 Field GraphQL appartenant au type **ImportantTodo**:
 
 - Name
 
@@ -572,7 +578,7 @@ Créer une mutation **createImportantTask** qui permet de créer une ImportantTo
 
 Creer une classe **TodoListSchema** qui étend `Schema`
 
-Son constructeur prend en argument un **IServiceProvider**, à partir duquel on peut recupérer les deux services **TodoListQuery** & **TodoListQuery** via la méthode **GetRequiredService()**.
+Son constructeur prend en argument un **IServiceProvider**, à partir duquel on peut recupérer les deux services **TodoListQuery** & **TodoListMutation** via la méthode **GetRequiredService()**.
 
 Il possède deux propriétés :
 
@@ -605,7 +611,7 @@ Il possède deux propriétés :
 
 ----
 
-Creer une classe **GraphQLUserContext** qui étend `Dictionary<string, object>`
+Créer une classe **GraphQLUserContext** qui étend `Dictionary<string, object>`
 
 Il expose une propriété **User** de type **ClaimsPrincipal**.
 
