@@ -3,13 +3,26 @@
 A GraphQL TodoList Web API. 
 Query, Mutation, Schema.
 
-Using Dotnet Core 3.0 https://img.shields.io/badge/dotnet%20core-3.0.0-blue
-
 [![Dotnet Core 3.0](https://img.shields.io/badge/dotnet%20core-3.0.0-blue)](https://dotnet.microsoft.com/download)
 
 [![Graphql](https://img.shields.io/badge/graphql-documentation-%23e535ab)](https://graphql-dotnet.github.io/docs/getting-started/introduction/)
 
 [![GitPitch](https://gitpitch.com/assets/badge.svg)](https://gitpitch.com/pipic1/GraphQLDotNet-API)
+
+
+## Prerequisites
+
+Visual studio code:
+[![Visual studio code](https://img.shields.io/badge/sutdio%20code-latest-blue)](https://code.visualstudio.com/)
+
+Extention OmniSharp:
+[![OmniSharp](https://img.shields.io/badge/OmniSharp-latest-blue)](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
+
+.NET Core 3.0:
+[![Dotnet Core 3.0](https://img.shields.io/badge/dotnet%20core-3.0.0-blue)](https://dotnet.microsoft.com/download)
+
+.NET Framework 4.8 (for OmniSharp):
+[![.NET Framework 4.8](https://img.shields.io/badge/dotnet%20framework-latest-blue)](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
 ## Start and run
 
