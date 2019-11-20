@@ -397,10 +397,15 @@ Un powershell pour vous aider, à télécharger [ici](https://raw.githubusercont
 ----
 
 Une classe abstraite TodoItem qui contient les proriétés:
+
 - ID
+
 - Name 
+
 - Description
+
 - RelatedTo
+
 <br>
 Une classe ImportantTodo qui hérite de TodoItem
 <br>
@@ -465,9 +470,10 @@ Le constructeur prends le gestionnaire des données en argument (TodoListData)
 #### Création de l'enum du status d'un todo
 
 ----
-1 - Créer une enum: **Priority**, avec trois valeurs ( LOW, MEDIUM, HIGH )
 
-2 - Créer une classe: **PriorityEnum** qui hérite de **EnumerationGraphType<Priority>**
+1. Créer une enum: **Priority**, avec trois valeurs ( LOW, MEDIUM, HIGH )
+
+2. Créer une classe: **PriorityEnum** qui hérite de **EnumerationGraphType<Priority>**
     
 Son constructeur set les proriétés **Name**, **Description**.
 
@@ -555,7 +561,7 @@ Ainsi que 3 Field GraphQL appartenant au type **ImportantTodo**:
 
 - Priority
 
-[TodoListData](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/TodoListData.cs)
+[ImportantTodoInputType](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/ImportantTodoInputType.cs)
 
 
 +++
