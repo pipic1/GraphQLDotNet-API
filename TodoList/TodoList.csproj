@@ -10,7 +10,7 @@
 
   
   <ItemGroup>
-    <PackageReference Include="GraphQL" Version="3.0.0-preview-1282" />
+    <PackageReference Include="GraphQL" Version="3.0.0-preview-1271" />
   </ItemGroup>
 
 </Project>
