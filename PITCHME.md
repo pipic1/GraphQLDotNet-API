@@ -406,7 +406,7 @@ Une classe abstraite **TodoItem** qui contient les proriétés:
 
 - RelatedTo
 
-Une classe **ImportantTodo** qui hérite de **TodoItem**, il possède une propriété en plus **Priority** de type **int**
+Une classe **ImportantTodo** qui hérite de **TodoItem**, elle possède une propriété en plus **Priority** de type **int**
 <br>
 Une classe **SecondaryTodo** qui hérite de **TodoItem**
 
@@ -541,6 +541,8 @@ Creer une classe **TodoListQuery** qui étend `ObjectGraphType<object>`
 
 [TodoListQuery](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/TodoListQuery.cs)
 
++++?code=/TodoList/TodoListQuery.cs&lang=csharp
+
 +++
 @transition[slide-in slide-out]
 #### Creation d'une InputType
@@ -571,7 +573,13 @@ Ainsi que 3 Fields GraphQL appartenant au type **ImportantTodo**:
 
 Creer une classe **TodoListMutation** qui étend `ObjectGraphType`
 
-Créer une mutation **createImportantTask** qui permet de créer une ImportantTodo
+Créer une mutation **createImportantTask** qui permet de créer une **ImportantTodo**
+
+Utilisation de la methode **AddImportantTodo()** de **TodoListData**
+
+Récuperation de l'argument provenant de l'input:
+
+`var importantTask = context.GetArgument<ImportantTodo>("task");`
 
 [TodoListMutation](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/TodoListMutation.cs)
 
@@ -592,6 +600,8 @@ Il possède deux propriétés :
 - Mutation
 
 [TodoListSchema](https://raw.githubusercontent.com/pipic1/GraphQLDotNet-API/master/TodoList/TodoListSchema.cs)
+
++++?code=/TodoList/TodoListSchema.cs&lang=csharp
 
 +++
 @transition[slide-in slide-out]
